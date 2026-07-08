@@ -217,16 +217,12 @@ export function AppsSection() {
                     </p>
                     <div className="space-y-1">
                       {clients.map((c, i) => (
-                        <a
+                        <button
                           key={c.name}
-                          href={c.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => {
-                            e.preventDefault();
+                          onClick={() => {
                             setActiveIndex(i);
                           }}
-                          className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors text-sm ${
+                          className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors text-sm text-left ${
                             i === activeIndex
                               ? "bg-primary/10 text-primary"
                               : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
@@ -240,7 +236,7 @@ export function AppsSection() {
                           >
                             {statusConfig[c.status].label}
                           </Badge>
-                        </a>
+                        </button>
                       ))}
                     </div>
                     <p className="text-[11px] text-muted-foreground mt-4 leading-relaxed">

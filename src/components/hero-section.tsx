@@ -12,35 +12,6 @@ interface NetworkStats {
   uptime: string;
 }
 
-function AnimatedCounter({
-  target,
-  duration = 2000,
-  suffix = "",
-}: {
-  target: number;
-  duration?: number;
-  suffix?: string;
-}) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    const startTime = performance.now();
-    const animate = (currentTime: number) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(eased * target));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
-  }, [target, duration]);
-  return (
-    <span>
-      {count.toLocaleString()}
-      {suffix}
-    </span>
-  );
-}
-
 const defaultStats: NetworkStats = {
   users: 847,
   channels: 234,

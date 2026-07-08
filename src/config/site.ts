@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Modern IRC network for community-driven chat",
   description:
     "Connect to LibraryIRC, a modern IRC network with multiple web clients, real-time channels, and a welcoming community.",
-  url: "https://libraryirc.example.com",
+  url: "https://libraryircnet.vercel.app",
   keywords: [
     "LibraryIRC",
     "IRC",
@@ -23,12 +23,12 @@ export const siteConfig = {
     { label: "How it Works", href: "#how-it-works" },
   ],
   contact: {
-    email: "hello@libraryirc.example.com",
-    ircServer: "irc.libraryirc.example.com",
+    email: "support@libraryirc.net",
+    ircServer: "irc.libraryirc.net",
     ircPort: 6697,
   },
   social: {
-    github: "https://github.com",
+    github: "https://github.com/alymaher494/chat-project",
     x: "https://x.com",
   },
 } as const;

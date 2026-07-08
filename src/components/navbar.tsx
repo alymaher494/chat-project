@@ -9,7 +9,6 @@ import {
   MessageSquare,
   BarChart3,
   Info,
-  ChevronDown,
   Sun,
   Moon,
 } from "lucide-react";
@@ -21,7 +20,6 @@ const navLinks = [
     label: "Chat Now",
     href: "#apps",
     icon: MessageSquare,
-    dropdown: false,
   },
   { label: "Features", href: "#features", icon: null },
   { label: "Services", href: "#services", icon: null },
@@ -89,7 +87,6 @@ export function Navbar() {
             >
               {link.icon && <link.icon className="size-3.5" />}
               {link.label}
-              {link.dropdown && <ChevronDown className="size-3" />}
             </button>
           ))}
         </div>
