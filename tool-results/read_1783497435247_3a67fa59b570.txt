@@ -1,0 +1,1223 @@
+     1→- generic
+     2→  - banner
+     3→    - navigation
+     4→      - link "IRC4Fun Home" [ref=e13]
+     5→        - image "IRC4Fun"
+     6→      - list
+     7→        - listitem [level=1]
+     8→          - link "IRC4Fun Home" [ref=e147]
+     9→            - StaticText ""
+    10→            - StaticText " Home"
+    11→        - listitem [level=1]
+    12→          - button " Chat Now" [expanded=false, ref=e148]
+    13→            - StaticText ""
+    14→            - StaticText " Chat Now"
+    15→        - listitem [level=1]
+    16→          - button " Network & Stats" [expanded=false, ref=e149]
+    17→            - StaticText ""
+    18→            - StaticText " Network & Stats"
+    19→        - listitem [level=1]
+    20→          - link " News" [ref=e150]
+    21→            - StaticText ""
+    22→            - StaticText " News"
+    23→        - listitem [level=1]
+    24→          - link " Games" [ref=e151]
+    25→            - StaticText ""
+    26→            - StaticText " Games"
+    27→        - listitem [level=1]
+    28→          - link " Members" [ref=e152]
+    29→            - StaticText ""
+    30→            - StaticText " Members"
+    31→        - listitem [level=1]
+    32→          - button " Guides" [expanded=false, ref=e153]
+    33→            - StaticText ""
+    34→            - StaticText " Guides"
+    35→        - listitem [level=1]
+    36→          - link " IRCplus+" [ref=e154]
+    37→            - StaticText ""
+    38→            - StaticText " IRCplus+"
+    39→        - listitem [level=1]
+    40→          - link " Staff" [ref=e155]
+    41→            - StaticText ""
+    42→            - StaticText " Staff"
+    43→        - listitem [level=1]
+    44→          - button "Toggle dark theme" [ref=e156]
+    45→        - listitem [level=1]
+    46→          - link "Log In" [ref=e157]
+    47→        - listitem [level=1]
+    48→          - link "Sign Up" [ref=e158]
+    49→  - main
+    50→    - generic
+    51→      - generic
+    52→        - heading "Welcome to IRC4Fun Free IRC Chat and Community" [level=1, ref=e39]
+    53→          - StaticText "Welcome to"
+    54→          - generic
+    55→            - StaticText "IRC4Fun"
+    56→          - StaticText "Free IRC Chat and Community"
+    57→        - paragraph
+    58→          - StaticText "Chat online, join a trusted IRC server, and meet people from around the world in free IRC chat rooms."
+    59→        - generic
+    60→          - StaticText "Terminal"
+    61→          - generic
+    62→            - generic
+    63→              - StaticText "$ "
+    64→              - StaticText "/connect irc.irc4fun.net +6697"
+    65→              - button "Copy command" [ref=e160]
+    66→                - StaticText ""
+    67→            - generic
+    68→              - StaticText "Resolving irc.irc4fun.net"
+    69→            - generic
+    70→              - StaticText "✓ Connecting to 149.56.45.62:+6697"
+    71→            - generic
+    72→              - StaticText "✓ TLS handshake — TLS 1.3 [ECDHE-RSA-AES-256-GCM-AEAD]"
+    73→            - generic
+    74→              - StaticText "✓ SASL SCRAM-SHA-256,PLAIN,EXTERNAL authentication successful"
+    75→            - generic
+    76→              - StaticText "✓ Welcome to the IRC4Fun Network — MOTD loaded"
+    77→            - generic
+    78→              - StaticText "✓ Joined #IRC4Fun — "
+    79→              - StaticText "— users"
+    80→          - paragraph
+    81→            - StaticText "No client? "
+    82→            - link "Try Web Chat " [ref=e159]
+    83→              - StaticText "Try Web Chat "
+    84→              - StaticText ""
+    85→          - generic "Network trust indicators"
+    86→            - StaticText ""
+    87→            - StaticText "Zero tolerance for surveillance"
+    88→            - StaticText ""
+    89→            - StaticText "Community-driven moderation"
+    90→            - StaticText ""
+    91→            - StaticText "No logging of private messages"
+    92→            - StaticText ""
+    93→            - StaticText "Tor-friendly access nodes"
+    94→    - StaticText ""
+    95→    - StaticText "—"
+    96→    - paragraph
+    97→      - StaticText "USERS ONLINE"
+    98→    - StaticText "#"
+    99→    - StaticText "—"
+   100→    - paragraph
+   101→      - StaticText "CHANNELS"
+   102→    - StaticText ""
+   103→    - StaticText "—"
+   104→    - paragraph
+   105→      - StaticText "SERVERS"
+   106→    - StaticText ""
+   107→    - StaticText "18"
+   108→    - paragraph
+   109→      - StaticText "YEARS ONLINE"
+   110→    - generic
+   111→      - StaticText ""
+   112→      - StaticText "CRYPTO"
+   113→      - generic
+   114→        - image "BTC"
+   115→        - StaticText "BTC"
+   116→        - StaticText "$62,827"
+   117→        - StaticText "▼ -0.34%"
+   118→        - image "ETH"
+   119→        - StaticText "ETH"
+   120→        - StaticText "$1,755"
+   121→        - StaticText "▼ -0.86%"
+   122→        - image "XMR"
+   123→        - StaticText "XMR"
+   124→        - StaticText "$330.79"
+   125→        - StaticText "▲ +1.52%"
+   126→        - image "LTC"
+   127→        - StaticText "LTC"
+   128→        - StaticText "$43.82"
+   129→        - StaticText "▼ -0.59%"
+   130→        - image "DOGE"
+   131→        - StaticText "DOGE"
+   132→        - StaticText "$0.0724"
+   133→        - StaticText "▼ -3.51%"
+   134→        - image "SOL"
+   135→        - StaticText "SOL"
+   136→        - StaticText "$78.14"
+   137→        - StaticText "▼ -4.05%"
+   138→        - image "XRP"
+   139→        - StaticText "XRP"
+   140→        - StaticText "$1.09"
+   141→        - StaticText "▼ -2.98%"
+   142→        - image "ADA"
+   143→        - StaticText "ADA"
+   144→        - StaticText "$0.1692"
+   145→        - StaticText "▼ -5.85%"
+   146→        - image "BTC"
+   147→        - StaticText "BTC"
+   148→        - StaticText "$62,827"
+   149→        - StaticText "▼ -0.34%"
+   150→        - image "ETH"
+   151→        - StaticText "ETH"
+   152→        - StaticText "$1,755"
+   153→        - StaticText "▼ -0.86%"
+   154→        - image "XMR"
+   155→        - StaticText "XMR"
+   156→        - StaticText "$330.79"
+   157→        - StaticText "▲ +1.52%"
+   158→        - image "LTC"
+   159→        - StaticText "LTC"
+   160→        - StaticText "$43.82"
+   161→        - StaticText "▼ -0.59%"
+   162→        - image "DOGE"
+   163→        - StaticText "DOGE"
+   164→        - StaticText "$0.0724"
+   165→        - StaticText "▼ -3.51%"
+   166→        - image "SOL"
+   167→        - StaticText "SOL"
+   168→        - StaticText "$78.14"
+   169→        - StaticText "▼ -4.05%"
+   170→        - image "XRP"
+   171→        - StaticText "XRP"
+   172→        - StaticText "$1.09"
+   173→        - StaticText "▼ -2.98%"
+   174→        - image "ADA"
+   175→        - StaticText "ADA"
+   176→        - StaticText "$0.1692"
+   177→        - StaticText "▼ -5.85%"
+   178→    - generic
+   179→      - StaticText ""
+   180→      - heading "IRC World Clock" [level=3, ref=e40]
+   181→      - paragraph
+   182→        - StaticText "Active IRC regions worldwide"
+   183→      - StaticText "🇺🇸"
+   184→      - StaticText "US East"
+   185→      - StaticText "New York"
+   186→      - generic
+   187→        - StaticText "03:57 AM"
+   188→      - StaticText "🇺🇸"
+   189→      - StaticText "US West"
+   190→      - StaticText "Los Angeles"
+   191→      - generic
+   192→        - StaticText "12:57 AM"
+   193→      - StaticText "🇬🇧"
+   194→      - StaticText "Europe"
+   195→      - StaticText "London"
+   196→      - generic
+   197→        - StaticText "08:57 AM"
+   198→      - StaticText "🇦🇺"
+   199→      - StaticText "Australia"
+   200→      - StaticText "Sydney"
+   201→      - generic
+   202→        - StaticText "05:57 PM"
+   203→    - generic
+   204→      - StaticText ""
+   205→      - heading "Network Health" [level=3, ref=e41]
+   206→      - paragraph
+   207→        - StaticText "Real-time performance metrics"
+   208→      - StaticText "Network Status"
+   209→      - StaticText ""
+   210→      - StaticText "EXCELLENT"
+   211→      - StaticText "Uptime"
+   212→      - StaticText "99.99%"
+   213→      - StaticText "Avg. Latency"
+   214→      - StaticText "29ms"
+   215→      - StaticText "Peak Capacity"
+   216→      - StaticText "70%"
+   217→    - generic
+   218→      - StaticText ""
+   219→      - heading "IRC Tip of the Day" [level=3, ref=e42]
+   220→      - paragraph
+   221→        - StaticText "Learn something new"
+   222→      - generic
+   223→        - StaticText "\""
+   224→        - paragraph
+   225→          - StaticText "Use "
+   226→          - code
+   227→            - StaticText "/mode #channel +m"
+   228→          - StaticText " to make your channel moderated. Only voiced users (+v) and ops can speak - great for announcements!"
+   229→      - generic
+   230→        - StaticText ""
+   231→        - StaticText "CHANNEL MODERATION"
+   232→      - button " Next Tip" [ref=e43]
+   233→        - StaticText ""
+   234→        - StaticText "Next Tip"
+   235→      - button " Learn More" [ref=e44]
+   236→        - StaticText ""
+   237→        - StaticText "Learn More"
+   238→    - heading " Why IRC4Fun" [level=2, ref=e14]
+   239→      - StaticText ""
+   240→      - StaticText " Why IRC4Fun"
+   241→    - paragraph
+   242→      - StaticText "Everything you need for a great IRC experience, all in one place. IRC4Fun is an independent IRC network built for those who remember when the internet was free."
+   243→    - paragraph
+   244→      - StaticText "No corporate oversight. No data harvesting. No algorithmic manipulation. Just raw, unfiltered communication the way it was meant to be."
+   245→    - StaticText ""
+   246→    - heading "Lightning Fast" [level=3, ref=e15]
+   247→    - paragraph
+   248→      - StaticText "Low-latency connections across multiple geographic regions with servers optimized for speed."
+   249→    - StaticText ""
+   250→    - heading "Secure & Private" [level=3, ref=e16]
+   251→    - paragraph
+   252→      - StaticText "TLS encryption, secure authentication, and privacy-first policies to keep your conversations safe."
+   253→    - StaticText ""
+   254→    - heading "Privacy by Principle" [level=3, ref=e17]
+   255→    - paragraph
+   256→      - StaticText "We do not log private messages and keep clear, privacy-first standards to protect personal conversations."
+   257→    - StaticText ""
+   258→    - heading "Tor-Friendly Access" [level=3, ref=e18]
+   259→    - paragraph
+   260→      - StaticText "Tor-friendly access nodes are available for users who want an extra layer of anonymity when connecting."
+   261→    - StaticText ""
+   262→    - heading "Community Driven" [level=3, ref=e19]
+   263→    - paragraph
+   264→      - StaticText "Built by and for the community with open-source tools, community channels, and active support."
+   265→    - StaticText ""
+   266→    - heading "IRCv3 Support" [level=3, ref=e20]
+   267→    - paragraph
+   268→      - StaticText "Modern protocol extensions including SASL, message tags, server-time, account tracking, and more."
+   269→    - heading " Powered by IRC Services" [level=2, ref=e21]
+   270→      - StaticText ""
+   271→      - StaticText " Powered by IRC Services"
+   272→    - paragraph
+   273→      - StaticText "Everything you need to manage identity, channels, bots, and network tools in one place."
+   274→    - generic
+   275→      - generic
+   276→        - generic
+   277→          - StaticText ""
+   278→        - heading "NickServ" [level=3, ref=e70]
+   279→        - paragraph
+   280→          - StaticText "Register and protect your nickname, manage passwords, set up email recovery, and group multiple nicks under one account."
+   281→      - generic
+   282→        - generic
+   283→          - StaticText "#"
+   284→        - heading "ChanServ" [level=3, ref=e71]
+   285→        - paragraph
+   286→          - StaticText "Register channels, manage access lists, set auto-ops, configure topic locks, and control channel modes with ease."
+   287→      - generic
+   288→        - generic
+   289→          - StaticText ""
+   290→        - heading "BotServ" [level=3, ref=e72]
+   291→        - paragraph
+   292→          - StaticText "Assign network bots to your channel for automated moderation, greetings, fantasy commands, and custom responses."
+   293→      - generic
+   294→        - generic
+   295→          - StaticText "@"
+   296→        - heading "HostServ" [level=3, ref=e73]
+   297→        - paragraph
+   298→          - StaticText "Request and manage virtual hosts (vhosts) to customize your displayed hostname and mask your real address on the network."
+   299→      - generic
+   300→        - generic
+   301→          - StaticText ""
+   302→        - heading "MemoServ" [level=3, ref=e74]
+   303→        - paragraph
+   304→          - StaticText "Send and receive offline messages to other registered users. Read, delete, and manage your memos from anywhere."
+   305→      - generic
+   306→        - generic
+   307→          - StaticText ""
+   308→        - heading "Global" [level=3, ref=e75]
+   309→        - paragraph
+   310→          - StaticText "Network-wide announcement service used by staff to broadcast important messages, maintenance notices, and policy updates."
+   311→      - generic
+   312→        - generic
+   313→          - StaticText ""
+   314→        - heading "HelpServ" [level=3, ref=e76]
+   315→        - paragraph
+   316→          - StaticText "Automated help system that provides quick reference guides, command syntax, and usage tips for all IRC services."
+   317→      - generic
+   318→        - generic
+   319→          - StaticText ""
+   320→        - heading "GroupServ" [level=3, ref=e77]
+   321→        - paragraph
+   322→          - StaticText "Create and manage groups for organizing users. Assign group-based privileges, manage membership, and streamline access control."
+   323→    - paragraph
+   324→      - link " Need help with services? Ask in #help" [ref=e45]
+   325→        - StaticText ""
+   326→        - StaticText "Need help with services? Ask in #help"
+   327→    - heading " News" [level=2, ref=e22]
+   328→      - StaticText ""
+   329→      - StaticText " News"
+   330→    - paragraph
+   331→      - StaticText "News, updates, and articles from the IRC4Fun team."
+   332→    - generic
+   333→      - image "New Web Client: Orbit"
+   334→      - heading "New Web Client: Orbit" [level=3, ref=e46]
+   335→        - link "New Web Client: Orbit" [ref=e78]
+   336→      - paragraph
+   337→        - StaticText "We're excited to announce that we've deployed a new webchat client, called Orbit. Features Full IRCv3. Orbit negotiates 25 capabilities: …"
+   338→      - link " siniStar" [ref=e47]
+   339→        - StaticText ""
+   340→        - StaticText "siniStar"
+   341→      - StaticText ""
+   342→      - StaticText "Jul 3, 2026"
+   343→      - StaticText ""
+   344→      - StaticText "0 Comments"
+   345→    - generic
+   346→      - image "Help Guides: Modes (Improved)"
+   347→      - heading "Help Guides: Modes (Improved)" [level=3, ref=e48]
+   348→        - link "Help Guides: Modes (Improved)" [ref=e79]
+   349→      - paragraph
+   350→        - StaticText "We've updated our Help Guides for Channel Modes & User Modes, making it easier for you to find specific information about either …"
+   351→      - link " siniStar" [ref=e49]
+   352→        - StaticText ""
+   353→        - StaticText "siniStar"
+   354→      - StaticText ""
+   355→      - StaticText "Apr 25, 2026"
+   356→      - StaticText ""
+   357→      - StaticText "0 Comments"
+   358→    - generic
+   359→      - image "Discord Bridge"
+   360→      - heading "Discord Bridge" [level=3, ref=e50]
+   361→        - link "Discord Bridge" [ref=e80]
+   362→      - paragraph
+   363→        - StaticText "The Discord Bridge has been (temporarily) Disabled We apologize for the inconvenience, but have had to temporarily disable the Discord Bridge to Discord4Fun. After some …"
+   364→      - link " siniStar" [ref=e51]
+   365→        - StaticText ""
+   366→        - StaticText "siniStar"
+   367→      - StaticText ""
+   368→      - StaticText "Apr 21, 2026"
+   369→      - StaticText ""
+   370→      - StaticText "0 Comments"
+   371→    - heading "# Popular Channels" [level=2, ref=e23]
+   372→      - StaticText "#"
+   373→      - StaticText " Popular Channels"
+   374→    - paragraph
+   375→      - StaticText "Live channel activity powered by our network stats API, plus a full real-time directory below."
+   376→    - StaticText ""
+   377→    - StaticText "459"
+   378→    - StaticText " users online"
+   379→    - StaticText "#"
+   380→    - StaticText "142"
+   381→    - StaticText " channels"
+   382→    - StaticText ""
+   383→    - StaticText "29"
+   384→    - StaticText " active (10+ users)"
+   385→    - StaticText ""
+   386→    - StaticText "72"
+   387→    - StaticText " registered"
+   388→    - StaticText ""
+   389→    - StaticText " Top: "
+   390→    - StaticText "#irc4fun (158)"
+   391→    - generic
+   392→      - StaticText ""
+   393→      - heading "#irc4fun" [level=3, ref=e52]
+   394→      - StaticText "Main Lobby"
+   395→      - list
+   396→        - listitem [level=1]
+   397→          - StaticText ""
+   398→          - StaticText "Network announcements"
+   399→        - listitem [level=1]
+   400→          - StaticText ""
+   401→          - StaticText "General chat & hangout"
+   402→        - listitem [level=1]
+   403→          - StaticText ""
+   404→          - StaticText "Staff always available"
+   405→      - StaticText ""
+   406→      - StaticText "158"
+   407→      - StaticText "online"
+   408→      - StaticText ""
+   409→      - StaticText " Registered channel"
+   410→      - StaticText ""
+   411→      - StaticText "👋 Welcome to the official IRC4Fun Chat Channel 💬 | 🔐 Register your nickname: https://irc…"
+   412→      - link " Join Channel" [ref=e53]
+   413→        - StaticText ""
+   414→        - StaticText " Join Channel"
+   415→    - generic
+   416→      - StaticText "FEATURED"
+   417→      - StaticText ""
+   418→      - heading "#help" [level=3, ref=e54]
+   419→      - StaticText "Support & Help"
+   420→      - list
+   421→        - listitem [level=1]
+   422→          - StaticText ""
+   423→          - StaticText "NickServ & ChanServ guides"
+   424→        - listitem [level=1]
+   425→          - StaticText ""
+   426→          - StaticText "Connection troubleshooting"
+   427→        - listitem [level=1]
+   428→          - StaticText ""
+   429→          - StaticText "Friendly staff support"
+   430→      - StaticText ""
+   431→      - StaticText "22"
+   432→      - StaticText "online"
+   433→      - StaticText ""
+   434→      - StaticText " Registered channel"
+   435→      - StaticText ""
+   436→      - StaticText "❓ Official IRC4Fun Network & Services Help Channel | 🤖 Search our Website Help/Guides: ?he…"
+   437→      - link " Join Channel" [ref=e55]
+   438→        - StaticText ""
+   439→        - StaticText " Join Channel"
+   440→    - generic
+   441→      - StaticText ""
+   442→      - heading "#development" [level=3, ref=e56]
+   443→      - StaticText "Development"
+   444→      - list
+   445→        - listitem [level=1]
+   446→          - StaticText ""
+   447→          - StaticText "Bot & module coding"
+   448→        - listitem [level=1]
+   449→          - StaticText ""
+   450→          - StaticText "Open-source projects"
+   451→        - listitem [level=1]
+   452→          - StaticText ""
+   453→          - StaticText "Collaboration welcome"
+   454→      - StaticText ""
+   455→      - StaticText "50"
+   456→      - StaticText "online"
+   457→      - StaticText ""
+   458→      - StaticText " Registered channel"
+   459→      - StaticText ""
+   460→      - StaticText "IRC4Fun Development Channel 👨💻👩💻💻📝 GitHub: https://GitHub.com/IRC4Fun/ - Want to c…"
+   461→      - link " Join Channel" [ref=e57]
+   462→        - StaticText ""
+   463→        - StaticText " Join Channel"
+   464→    - generic
+   465→      - StaticText ""
+   466→      - StaticText "IRC4Fun Channel List"
+   467→      - StaticText "_"
+   468→      - StaticText "□"
+   469→      - StaticText "×"
+   470→      - StaticText "File"
+   471→      - StaticText "Edit"
+   472→      - StaticText "View"
+   473→      - StaticText "Help"
+   474→      - StaticText "#"
+   475→      - StaticText "Channels:"
+   476→      - strong
+   477→        - StaticText "142"
+   478→      - StaticText "· Users:"
+   479→      - strong
+   480→        - StaticText "459"
+   481→      - StaticText "· Active (10+):"
+   482→      - strong
+   483→        - StaticText "29"
+   484→      - StaticText "#"
+   485→      - StaticText "Channel"
+   486→      - StaticText "Users"
+   487→      - StaticText "Modes"
+   488→      - StaticText "Topic"
+   489→      - generic
+   490→        - StaticText "#"
+   491→        - StaticText "#irc4fun"
+   492→        - StaticText "👋 Welcome to the official IRC4Fun Chat Channel 💬 | 🔐 Register your nickname: https://irc4fun.net/r/register | 🧁 IRC4Fun celebrates nearly 19 years! 🎂 | 🖥️ Our website: https://irc4fun.net | 📊 Stats: https://irc4fun.net/r/wo8t8D | 🎮 Discord: https://discord.gg/8hCxhKKMzB"
+   493→        - StaticText ""
+   494→        - StaticText "Reg"
+   495→        - StaticText ""
+   496→        - StaticText "+BfHFCnTPrEt"
+   497→        - StaticText ""
+   498→        - StaticText "158"
+   499→        - link "Join" [ref=e81]
+   500→        - StaticText "#"
+   501→        - StaticText "#evilnet"
+   502→        - StaticText "'Welcome to #evilnet NEWS: New server linked https://www.evilnet.org/blax-elpolako/ || NEWS: We have implemented Anycast servers, try it ix.evilnet.org | Need Help? join #help | Join #Vhost for a cool hostname ||"
+   503→        - StaticText ""
+   504→        - StaticText "IRCplus+"
+   505→        - StaticText ""
+   506→        - StaticText "+lnt"
+   507→        - StaticText ""
+   508→        - StaticText "101"
+   509→        - link "Join" [ref=e82]
+   510→        - StaticText "#"
+   511→        - StaticText "#cannabis-efnet"
+   512→        - StaticText ""
+   513→        - StaticText "IRCplus+"
+   514→        - StaticText ""
+   515→        - StaticText "+lnPRt"
+   516→        - StaticText ""
+   517→        - StaticText "81"
+   518→        - link "Join" [ref=e83]
+   519→        - StaticText "#"
+   520→        - StaticText "#LGBT"
+   521→        - StaticText "🏳️🌈 Welcome to #LGBT! 🌈 - To Register, visit: https://irc4fun.net/accounts/register/ 🟥🟧🟨🟩🟦🟪"
+   522→        - StaticText ""
+   523→        - StaticText "Reg"
+   524→        - StaticText ""
+   525→        - StaticText "+HnPrt"
+   526→        - StaticText ""
+   527→        - StaticText "67"
+   528→        - link "Join" [ref=e84]
+   529→        - StaticText "#"
+   530→        - StaticText "#ircplus"
+   531→        - StaticText "👋 Welcome to IRCplus+: Providing Lurker, TheLounge & ZNC accounts, as well as IRCplus+ Networks! (PyLink) (https://irc4fun.net/ircplus/) | ➕ IRCplus+ users can also join #Lurker #TheLounge or #ZNC for Support/Maintenance Notices"
+   532→        - StaticText ""
+   533→        - StaticText "Reg"
+   534→        - StaticText ""
+   535→        - StaticText "+HnPrt"
+   536→        - StaticText ""
+   537→        - StaticText "60"
+   538→        - link "Join" [ref=e85]
+   539→        - StaticText "#"
+   540→        - StaticText "#ahs"
+   541→        - StaticText "American Horror Story 13 - What we know so far, including amazing OG cast: https://irc4fun.net/community/blog/american-horror-story-13/"
+   542→        - StaticText ""
+   543→        - StaticText "Reg"
+   544→        - StaticText ""
+   545→        - StaticText "+HnPrt"
+   546→        - StaticText ""
+   547→        - StaticText "57"
+   548→        - link "Join" [ref=e86]
+   549→        - StaticText "#"
+   550→        - StaticText "#development"
+   551→        - StaticText "IRC4Fun Development Channel 👨💻👩💻💻📝 GitHub: https://GitHub.com/IRC4Fun/ - Want to contribute? Hang out here - ✏️ Paste: https://irc4fun.net/paste/"
+   552→        - StaticText ""
+   553→        - StaticText "Reg"
+   554→        - StaticText ""
+   555→        - StaticText "+HnPrt"
+   556→        - StaticText ""
+   557→        - StaticText "50"
+   558→        - link "Join" [ref=e87]
+   559→        - StaticText "#"
+   560→        - StaticText "#linux"
+   561→        - StaticText ".: Latest versions :: Mainline: 6.13-rc6 :: Stable: 6.12.9 :: LTS: 6.6.71 ::::."
+   562→        - StaticText ""
+   563→        - StaticText "Reg"
+   564→        - StaticText ""
+   565→        - StaticText "+HnPrt"
+   566→        - StaticText ""
+   567→        - StaticText "50"
+   568→        - link "Join" [ref=e88]
+   569→        - StaticText "#"
+   570→        - StaticText "#strangerthings"
+   571→        - StaticText "Stranger Things - Season 5 is in production! RELEASE DATE(s): Pt1 11/26/25 Pt2 12/25/25 Pt3 12/31/25"
+   572→        - StaticText ""
+   573→        - StaticText "IRCplus+"
+   574→        - StaticText ""
+   575→        - StaticText "+nPt"
+   576→        - StaticText ""
+   577→        - StaticText "48"
+   578→        - link "Join" [ref=e89]
+   579→        - StaticText "#"
+   580→        - StaticText "#Politics"
+   581→        - StaticText "Welcome to #Politics (USA) - Please register with NickServ (https://irc4fun.net/accounts/register/) to speak & remember to be respectful - Channel Rules: https://irc4fun.net/r/prules"
+   582→        - StaticText ""
+   583→        - StaticText "Reg"
+   584→        - StaticText ""
+   585→        - StaticText "+BfHFnPrMt"
+   586→        - StaticText ""
+   587→        - StaticText "46"
+   588→        - link "Join" [ref=e90]
+   589→        - StaticText "#"
+   590→        - StaticText "#Ukraine"
+   591→        - StaticText "🌻🌻🌻 💬 News & Discussion of the Russian Invasion of Ukraine 🇺🇦 - ☮️ Please be civil & considerate of each other - 👢 Any assholes (pro-Putin/pro-War/Far Right loons) will be removed 🚪 - 🌻🌻🌻"
+   592→        - StaticText ""
+   593→        - StaticText "Reg"
+   594→        - StaticText ""
+   595→        - StaticText "+HnPrt"
+   596→        - StaticText ""
+   597→        - StaticText "46"
+   598→        - link "Join" [ref=e91]
+   599→        - StaticText "#"
+   600→        - StaticText "#duckhunt"
+   601→        - generic
+   602→          - StaticText "Welcome to #DuckHunt! news: unlimited ammo! - free rearms with !rearm - levels upto 300! the numbers have been worked out with magical formulas by a freak in the sheets! - slight xp increase. (Last game's winner: msmatrix)"
+   603→        - StaticText ""
+   604→        - StaticText "Reg"
+   605→        - StaticText ""
+   606→        - StaticText "+HnPrt"
+   607→        - StaticText ""
+   608→        - StaticText "43"
+   609→        - link "Join" [ref=e92]
+   610→        - StaticText "#"
+   611→        - StaticText "#techheads"
+   612→        - StaticText "#techheads High ✌️👨💻️🛟️🌥️🕖️👋 ☮️Not limited to, Tech but including General chat be kind to each other and follow the rules here https://irc4fun.net/r/techheadsrules 👋 ☮️ while hanging out.B Patient We have lives 🕘️ Pls 🕘️ && UBU!😇️ & not THEM. U R the only U there is."
+   613→        - StaticText ""
+   614→        - StaticText "Reg"
+   615→        - StaticText ""
+   616→        - StaticText "+lnPrt"
+   617→        - StaticText ""
+   618→        - StaticText "43"
+   619→        - link "Join" [ref=e93]
+   620→        - StaticText "#"
+   621→        - StaticText "#trivia"
+   622→        - generic
+   623→          - StaticText "#Trivia@IRC4Fun! (To start trivia, type: .trivia) | new questions added, totalling: 670000 questions & 12130 KAOS now in the database. | Use #Trivia-Chat for reporting any question/answer related issues, and if you want/must, you can use it for chat... I'll get to it one day."
+   624→        - StaticText ""
+   625→        - StaticText "Reg"
+   626→        - StaticText ""
+   627→        - StaticText "+HnQPrt"
+   628→        - StaticText ""
+   629→        - StaticText "42"
+   630→        - link "Join" [ref=e94]
+   631→        - StaticText "#"
+   632→        - StaticText "#uno"
+   633→        - StaticText "to start uno, !uno - after the game has started, you can play against the bot or other people, type: jo - then for playing... to play your blue 5 card, type: p b 5, to pass type: pa ...to draw a card, type dr.... (full help: !unocmds)"
+   634→        - StaticText ""
+   635→        - StaticText "Reg"
+   636→        - StaticText ""
+   637→        - StaticText "+HnPrt"
+   638→        - StaticText ""
+   639→        - StaticText "42"
+   640→        - link "Join" [ref=e95]
+   641→        - StaticText "#"
+   642→        - StaticText "#Discord"
+   643→        - StaticText "IRC4Fun's Discord Server (Discord4Fun) 🗨️ -- Chat & Help Channel | kassro has been working hard to get the Discord optimized, modern, and running!"
+   644→        - StaticText ""
+   645→        - StaticText "Reg"
+   646→        - StaticText ""
+   647→        - StaticText "+VnPrt"
+   648→        - StaticText ""
+   649→        - StaticText "40"
+   650→        - link "Join" [ref=e96]
+   651→        - StaticText "#"
+   652→        - StaticText "#horror"
+   653→        - StaticText "😱 🔪 👻 🧟♂️ 🧟♀️ 🧛 Horror Movies: Discussions, Reviews, Endings Explained 🗨️ 🧛 🧟♀️ 🧟♂️ 👻 🔪 😱"
+   654→        - StaticText ""
+   655→        - StaticText "Reg"
+   656→        - StaticText ""
+   657→        - StaticText "+HnPrt"
+   658→        - StaticText ""
+   659→        - StaticText "40"
+   660→        - link "Join" [ref=e97]
+   661→        - StaticText "#"
+   662→        - StaticText "#lobby"
+   663→        - StaticText "Welcome! | Use SASL/Identify with NickServ within 30 seconds to avoid being Autojoined | Unregistered users messages can only be seen by @Ops | Search our Help/Guides: ?help HelpTopic | To Register: Visit https://irc4fun.net/r/register | Guides/Help: https://irc4fun.net/help | Main Channel: #IRC4Fun"
+   664→        - StaticText ""
+   665→        - StaticText "Reg"
+   666→        - StaticText ""
+   667→        - StaticText "+HiFCnTUPrt"
+   668→        - StaticText ""
+   669→        - StaticText "39"
+   670→        - link "Join" [ref=e98]
+   671→        - StaticText "#"
+   672→        - StaticText "#ChatNB"
+   673→        - StaticText "Chat Room (EN) (FR) Register your nickname: https://irc4fun.net/accounts/register/"
+   674→        - StaticText ""
+   675→        - StaticText "Reg"
+   676→        - StaticText ""
+   677→        - StaticText "+nrt"
+   678→        - StaticText ""
+   679→        - StaticText "38"
+   680→        - link "Join" [ref=e99]
+   681→        - StaticText "#"
+   682→        - StaticText "#sacredland"
+   683→        - StaticText "#sacredland - shared with undernet & rizon -> https://irc4fun.net/uin/"
+   684→        - StaticText ""
+   685→        - StaticText "Reg"
+   686→        - StaticText ""
+   687→        - StaticText "+nPrt"
+   688→        - StaticText ""
+   689→        - StaticText "37"
+   690→        - link "Join" [ref=e100]
+   691→      - StaticText "Live snapshot · 459 users · 142 channels · 29 active · 72 registered · Top: #irc4fun (158) · Updated 07:57:03 AM"
+   692→    - generic "Our values"
+   693→      - StaticText ""
+   694→      - heading "Free Forever" [level=4, ref=e58]
+   695→      - paragraph
+   696→        - StaticText "No fees, no ads, no subscriptions. IRC4Fun has been free since 2008 and always will be."
+   697→      - StaticText ""
+   698→      - heading "Open Source" [level=4, ref=e59]
+   699→      - paragraph
+   700→        - StaticText "Every piece of our stack is open source. Inspect, fork, and contribute — we build in the open."
+   701→      - StaticText ""
+   702→      - heading "Secure by Design" [level=4, ref=e60]
+   703→      - paragraph
+   704→        - StaticText "TLS 1.3, SASL, and CertFP baked in from the start. Your privacy matters to us."
+   705→      - StaticText ""
+   706→      - heading "Community Led" [level=4, ref=e61]
+   707→      - paragraph
+   708→        - StaticText "Run by volunteers, for the community. Since 2008, people have always come first."
+   709→    - heading "About IRC4Fun" [level=2, ref=e24]
+   710→    - paragraph
+   711→      - StaticText "IRC4Fun is a community-driven IRC network focused on providing stable, feature-rich chat infrastructure for projects, teams, and social groups around the world."
+   712→    - paragraph
+   713→      - StaticText "Whether you're running a community, a development team, or just hanging out with friends — we have you covered with registered nicknames, channels, and custom bots."
+   714→    - heading " Our Mission" [level=3, ref=e25]
+   715→      - StaticText ""
+   716→      - StaticText " Our Mission"
+   717→    - paragraph
+   718→      - StaticText "To provide a free, open, and secure IRC network where communities can grow and thrive. We believe in decentralized communication, user privacy, and open-source collaboration."
+   719→    - paragraph
+   720→      - StaticText "Our team of volunteers works around the clock to keep the network running, improve services, and welcome new users from all walks of life."
+   721→    - heading " Frequently Asked Questions" [level=2, ref=e26]
+   722→      - StaticText ""
+   723→      - StaticText " Frequently Asked Questions"
+   724→    - paragraph
+   725→      - StaticText "Quick answers to get you started on IRC4Fun."
+   726→    - list
+   727→      - listitem [level=1]
+   728→        - button "Getting Started " [expanded=true, ref=e101]
+   729→          - StaticText "Getting Started"
+   730→          - StaticText ""
+   731→        - generic
+   732→          - StaticText "Connect to IRC4Fun using any IRC client at "
+   733→          - strong
+   734→            - StaticText "irc.irc4fun.net"
+   735→          - StaticText " port 6697 (TLS). Register your nickname with NickServ and join channels to start chatting!"
+   736→      - listitem [level=1]
+   737→        - button "Web Chat Access " [expanded=false, ref=e102]
+   738→          - StaticText "Web Chat Access"
+   739→          - StaticText ""
+   740→        - StaticText "No IRC client? No problem. Use our built-in web chat to connect directly from your browser — no downloads or plugins needed."
+   741→      - listitem [level=1]
+   742→        - button "Channel Registration " [expanded=false, ref=e103]
+   743→          - StaticText "Channel Registration"
+   744→          - StaticText ""
+   745→        - StaticText "Register your channel with ChanServ to claim ownership. Set access lists, topic locks, and custom modes to manage your community your way."
+   746→      - listitem [level=1]
+   747→        - button "Bot & Service Accounts " [expanded=false, ref=e104]
+   748→          - StaticText "Bot & Service Accounts"
+   749→          - StaticText ""
+   750→        - StaticText "We support bots and service accounts. Request a bot hostmask or run your own bot — just follow our acceptable use policy."
+   751→    - generic
+   752→      - heading " Built for Modern IRC" [level=2, ref=e62]
+   753→        - StaticText ""
+   754→        - StaticText " Built for Modern IRC"
+   755→      - paragraph
+   756→        - StaticText "A complete suite of features designed for security, performance, and flexibility."
+   757→      - heading "SECURITY & AUTHENTICATION" [level=3, ref=e63]
+   758→      - generic
+   759→        - StaticText ""
+   760→        - heading "TLS / SSL Everywhere" [level=4, ref=e105]
+   761→        - paragraph
+   762→          - StaticText "All connections support TLS 1.3 encryption on port 6697. Plaintext fallback available but encrypted is strongly encouraged."
+   763→      - generic
+   764→        - StaticText ""
+   765→        - heading "SASL Authentication" [level=4, ref=e106]
+   766→        - paragraph
+   767→          - StaticText "Authenticate before connection registration with SASL PLAIN and EXTERNAL mechanisms for seamless, secure logins."
+   768→      - generic
+   769→        - StaticText ""
+   770→        - heading "CertFP Login" [level=4, ref=e107]
+   771→        - paragraph
+   772→          - StaticText "Link a TLS client certificate to your account for password-free authentication. Maximum security, zero friction."
+   773→      - heading "CONNECTIVITY & ACCESS" [level=3, ref=e64]
+   774→      - generic
+   775→        - StaticText ""
+   776→        - heading "IPv4 & IPv6 Dual-Stack" [level=4, ref=e108]
+   777→        - paragraph
+   778→          - StaticText "Full dual-stack networking. Connect over IPv4 or IPv6 — all servers support both protocols natively."
+   779→      - generic
+   780→        - StaticText ""
+   781→        - heading "Multi-Region Servers" [level=4, ref=e109]
+   782→        - paragraph
+   783→          - StaticText "Geographically distributed servers across US, EU, and AU regions for low-latency connections worldwide."
+   784→      - generic
+   785→        - StaticText ""
+   786→        - heading "Round-Robin DNS" [level=4, ref=e110]
+   787→        - paragraph
+   788→          - StaticText "irc.irc4fun.net automatically balances you to the best available server. Regional endpoints also available for direct connections."
+   789→      - heading "IDENTITY & CUSTOMIZATION" [level=3, ref=e65]
+   790→      - generic
+   791→        - StaticText ""
+   792→        - heading "Custom vHosts" [level=4, ref=e111]
+   793→        - paragraph
+   794→          - StaticText "Hide your real hostname with a vanity vHost. Request a custom one or use HostServ to set your own."
+   795→      - generic
+   796→        - StaticText ""
+   797→        - heading "Nick Grouping" [level=4, ref=e112]
+   798→        - paragraph
+   799→          - StaticText "Group multiple nicknames under one NickServ account. Switch freely between nicks while keeping one unified identity."
+   800→      - generic
+   801→        - StaticText ""
+   802→        - heading "MemoServ Messaging" [level=4, ref=e113]
+   803→        - paragraph
+   804→          - StaticText "Send offline messages to registered users with MemoServ. They'll receive your memo the next time they identify."
+   805→      - heading "ADVANCED & INTEGRATION" [level=3, ref=e66]
+   806→      - generic
+   807→        - StaticText ""
+   808→        - StaticText "NEW"
+   809→        - heading "IRC REST API" [level=4, ref=e114]
+   810→        - paragraph
+   811→          - StaticText "Full-featured JSON API powered by Anope RPC. Query users, channels, servers, and accounts programmatically."
+   812→      - generic
+   813→        - StaticText ""
+   814→        - heading "Bot & Automation Friendly" [level=4, ref=e115]
+   815→        - paragraph
+   816→          - StaticText "Run custom bots with dedicated hostmasks. Full IRCv3 support including message tags, account-tag, and labeled-response."
+   817→      - generic
+   818→        - StaticText ""
+   819→        - heading "Network Linking (IRCplus+)" [level=4, ref=e116]
+   820→        - paragraph
+   821→          - StaticText "IRC4Fun links with partner networks through our IRCplus+ relay, connecting communities across multiple IRC networks."
+   822→    - image "siniStar"
+   823→    - image "tabb"
+   824→    - image "Ti-Ti"
+   825→    - image "dracorex"
+   826→    - heading " Meet Our Team" [level=3, ref=e27]
+   827→      - StaticText ""
+   828→      - StaticText " Meet Our Team"
+   829→    - paragraph
+   830→      - StaticText "A dedicated group of volunteers keeping IRC4Fun running 24/7 — administrators, developers, and moderators."
+   831→    - link " View Staff" [ref=e28]
+   832→      - StaticText ""
+   833→      - StaticText "View Staff"
+   834→    - paragraph
+   835→      - StaticText "IRC4Fun — Join our growing community of IRC enthusiasts today"
+   836→    - link " Try Web Chat" [ref=e29]
+   837→      - StaticText ""
+   838→      - StaticText "Try Web Chat"
+   839→    - link " Create Account" [ref=e30]
+   840→      - StaticText ""
+   841→      - StaticText " Create Account"
+   842→  - contentinfo
+   843→    - image "IRC4Fun"
+   844→    - StaticText "IRC Network — Chat for Fun!"
+   845→    - list
+   846→      - listitem [level=1]
+   847→        - StaticText "Follow us:"
+   848→      - listitem [level=1]
+   849→        - link "" [ref=e117]
+   850→          - StaticText ""
+   851→      - listitem [level=1]
+   852→        - link "" [ref=e118]
+   853→          - StaticText ""
+   854→      - listitem [level=1]
+   855→        - link "" [ref=e119]
+   856→          - StaticText ""
+   857→      - listitem [level=1]
+   858→        - link "" [ref=e120]
+   859→          - StaticText ""
+   860→    - heading " LATEST NEWS" [level=4, ref=e31]
+   861→      - StaticText ""
+   862→      - StaticText " LATEST NEWS"
+   863→    - link " New Web Client: Orbit  Jul 03, 2026" [ref=e32]
+   864→      - StaticText ""
+   865→      - paragraph
+   866→        - StaticText "New Web Client: Orbit"
+   867→      - paragraph
+   868→        - StaticText ""
+   869→        - StaticText " Jul 03, 2026"
+   870→    - link " Help Guides: Modes (Improved)  Apr 25, 2026" [ref=e33]
+   871→      - StaticText ""
+   872→      - paragraph
+   873→        - StaticText "Help Guides: Modes (Improved)"
+   874→      - paragraph
+   875→        - StaticText ""
+   876→        - StaticText " Apr 25, 2026"
+   877→    - link " Discord Bridge  Apr 21, 2026" [ref=e34]
+   878→      - StaticText ""
+   879→      - paragraph
+   880→        - StaticText "Discord Bridge"
+   881→      - paragraph
+   882→        - StaticText ""
+   883→        - StaticText " Apr 21, 2026"
+   884→    - generic
+   885→      - heading " NETWORK STATUS" [level=4, ref=e67]
+   886→        - StaticText ""
+   887→        - StaticText "NETWORK STATUS"
+   888→      - generic
+   889→        - StaticText "11/11 online"
+   890→    - generic
+   891→      - StaticText ""
+   892→      - paragraph
+   893→        - StaticText "US Region avg 18.0 ms"
+   894→      - paragraph
+   895→        - StaticText "6 servers · Hub: USHub"
+   896→      - StaticText "6/6 ONLINE"
+   897→      - list
+   898→        - listitem [level=1]
+   899→          - paragraph
+   900→            - StaticText "coven"
+   901→          - paragraph
+   902→            - StaticText "(CA) Fiona Goode - and I am in charge everywhere!"
+   903→          - StaticText "0.82 ms"
+   904→          - StaticText "HUB"
+   905→        - listitem [level=1]
+   906→          - paragraph
+   907→            - StaticText "saturn"
+   908→          - paragraph
+   909→            - StaticText "(CA) a most uninhabitable planet"
+   910→          - StaticText "0.3 ms"
+   911→          - StaticText "HUB"
+   912→        - listitem [level=1]
+   913→          - paragraph
+   914→            - StaticText "USHub"
+   915→          - paragraph
+   916→            - StaticText "IRC4Fun US Hub"
+   917→          - StaticText "—"
+   918→          - StaticText "HUB"
+   919→        - listitem [level=1]
+   920→          - paragraph
+   921→            - StaticText "apocalypse"
+   922→          - paragraph
+   923→            - StaticText "(CA) How did you think this would end?"
+   924→          - StaticText "0.78 ms"
+   925→          - StaticText "LEAF"
+   926→        - listitem [level=1]
+   927→          - paragraph
+   928→            - StaticText "UIN"
+   929→          - paragraph
+   930→            - StaticText "IRCPlus Networks Server"
+   931→          - StaticText "—"
+   932→          - StaticText "LEAF"
+   933→        - listitem [level=1]
+   934→          - paragraph
+   935→            - StaticText "whiterose"
+   936→          - paragraph
+   937→            - StaticText "(US) Every hacker has her fixation: you hack people, I hack time."
+   938→          - StaticText "70.23 ms"
+   939→          - StaticText "LEAF"
+   940→      - StaticText ""
+   941→      - paragraph
+   942→        - StaticText "EU Region avg 133.6 ms"
+   943→      - paragraph
+   944→        - StaticText "5 servers · Hub: EUHub"
+   945→      - StaticText "5/5 ONLINE"
+   946→      - list
+   947→        - listitem [level=1]
+   948→          - paragraph
+   949→            - StaticText "EUHub"
+   950→          - paragraph
+   951→            - StaticText "IRC4Fun EU Hub"
+   952→          - StaticText "—"
+   953→          - StaticText "HUB"
+   954→        - listitem [level=1]
+   955→          - paragraph
+   956→            - StaticText "chaos"
+   957→          - paragraph
+   958→            - StaticText "Germany (DE) sacredland chaos"
+   959→          - StaticText "93.21 ms"
+   960→          - StaticText "LEAF"
+   961→        - listitem [level=1]
+   962→          - paragraph
+   963→            - StaticText "ChatNB"
+   964→          - paragraph
+   965→            - StaticText "Strasbourg (SBG) - France"
+   966→          - StaticText "—"
+   967→          - StaticText "LEAF"
+   968→        - listitem [level=1]
+   969→          - paragraph
+   970→            - StaticText "odyssey"
+   971→          - paragraph
+   972→            - StaticText "(SG) I'm not a scientist, but I know a good idea when I hear one."
+   973→          - StaticText "228.73 ms"
+   974→          - StaticText "LEAF"
+   975→        - listitem [level=1]
+   976→          - paragraph
+   977→            - StaticText "prometheus"
+   978→          - paragraph
+   979→            - StaticText "(UK) We cannot change the past, but we can learn from it."
+   980→          - StaticText "78.8 ms"
+   981→          - StaticText "LEAF"
+   982→      - StaticText ""
+   983→      - strong
+   984→        - StaticText "11"
+   985→      - StaticText "servers"
+   986→      - StaticText ""
+   987→      - strong
+   988→        - StaticText "4"
+   989→      - StaticText "hubs"
+   990→      - StaticText ""
+   991→      - strong
+   992→        - StaticText "7"
+   993→      - StaticText "leaves"
+   994→      - StaticText ""
+   995→      - strong
+   996→        - StaticText "11"
+   997→      - StaticText "online"
+   998→    - heading "NAVIGATE" [level=4, ref=e35]
+   999→    - list
+  1000→      - listitem [level=1]
+  1001→        - link " Home" [ref=e121]
+  1002→          - StaticText ""
+  1003→          - StaticText "Home"
+  1004→      - listitem [level=1]
+  1005→        - link " News" [ref=e122]
+  1006→          - StaticText ""
+  1007→          - StaticText "News"
+  1008→      - listitem [level=1]
+  1009→        - link " Members" [ref=e123]
+  1010→          - StaticText ""
+  1011→          - StaticText "Members"
+  1012→      - listitem [level=1]
+  1013→        - link " Staff" [ref=e124]
+  1014→          - StaticText ""
+  1015→          - StaticText "Staff"
+  1016→      - listitem [level=1]
+  1017→        - link " Statistics" [ref=e125]
+  1018→          - StaticText ""
+  1019→          - StaticText "Statistics"
+  1020→      - listitem [level=1]
+  1021→        - link " Help / Support" [ref=e126]
+  1022→          - StaticText ""
+  1023→          - StaticText "Help / Support"
+  1024→    - heading "CHAT & CHANNELS" [level=4, ref=e36]
+  1025→    - list
+  1026→      - listitem [level=1]
+  1027→        - link " Chat Now" [ref=e127]
+  1028→          - StaticText ""
+  1029→          - StaticText "Chat Now"
+  1030→      - listitem [level=1]
+  1031→        - link " Games" [ref=e128]
+  1032→          - StaticText ""
+  1033→          - StaticText "Games"
+  1034→      - listitem [level=1]
+  1035→        - link " TheLounge" [ref=e129]
+  1036→          - StaticText ""
+  1037→          - StaticText "TheLounge"
+  1038→      - listitem [level=1]
+  1039→        - link " Channel List & Stats" [ref=e130]
+  1040→          - StaticText ""
+  1041→          - StaticText "Channel List & Stats"
+  1042→      - listitem [level=1]
+  1043→        - link " IRCplus+" [ref=e131]
+  1044→          - StaticText ""
+  1045→          - StaticText "IRCplus+"
+  1046→      - listitem [level=1]
+  1047→        - link " WebChat Generator" [ref=e132]
+  1048→          - StaticText ""
+  1049→          - StaticText "WebChat Generator"
+  1050→    - heading "POLICIES" [level=4, ref=e37]
+  1051→    - list
+  1052→      - listitem [level=1]
+  1053→        - link " Privacy Policy" [ref=e133]
+  1054→          - StaticText ""
+  1055→          - StaticText "Privacy Policy"
+  1056→      - listitem [level=1]
+  1057→        - link " Acceptable Use (AUP)" [ref=e134]
+  1058→          - StaticText ""
+  1059→          - StaticText "Acceptable Use (AUP)"
+  1060→      - listitem [level=1]
+  1061→        - link " Operating Policy (AOP)" [ref=e135]
+  1062→          - StaticText ""
+  1063→          - StaticText "Operating Policy (AOP)"
+  1064→      - listitem [level=1]
+  1065→        - link " Etiquette" [ref=e136]
+  1066→          - StaticText ""
+  1067→          - StaticText "Etiquette"
+  1068→      - listitem [level=1]
+  1069→        - link " IRC Networks Policies" [ref=e137]
+  1070→          - StaticText ""
+  1071→          - StaticText "IRC Networks Policies"
+  1072→      - listitem [level=1]
+  1073→        - link " TheLounge TOU" [ref=e138]
+  1074→          - StaticText ""
+  1075→          - StaticText "TheLounge TOU"
+  1076→    - heading "RESOURCES" [level=4, ref=e38]
+  1077→    - list
+  1078→      - listitem [level=1]
+  1079→        - link " Pastebin" [ref=e139]
+  1080→          - StaticText ""
+  1081→          - StaticText "Pastebin"
+  1082→      - listitem [level=1]
+  1083→        - link " IRC Commands" [ref=e140]
+  1084→          - StaticText ""
+  1085→          - StaticText "IRC Commands"
+  1086→      - listitem [level=1]
+  1087→        - link " GitHub" [ref=e141]
+  1088→          - StaticText ""
+  1089→          - StaticText "GitHub"
+  1090→      - listitem [level=1]
+  1091→        - link " HelpDesk" [ref=e142]
+  1092→          - StaticText ""
+  1093→          - StaticText "HelpDesk"
+  1094→      - listitem [level=1]
+  1095→        - link " REST API" [ref=e143]
+  1096→          - StaticText ""
+  1097→          - StaticText "REST API"
+  1098→      - listitem [level=1]
+  1099→        - link " RSS Feed" [ref=e144]
+  1100→          - StaticText ""
+  1101→          - StaticText "RSS Feed"
+  1102→      - listitem [level=1]
+  1103→        - link " Status" [ref=e145]
+  1104→          - StaticText ""
+  1105→          - StaticText "Status"
+  1106→      - listitem [level=1]
+  1107→        - link [ref=e146]
+  1108→          - image
+  1109→    - paragraph
+  1110→      - StaticText "© 2026 IRC4Fun. All rights reserved."
+  1111→    - paragraph
+  1112→      - StaticText "Powered by "
+  1113→      - link "django" [ref=e68]
+  1114→      - StaticText " & "
+  1115→      - link "IRC4Fun" [ref=e69]
+  1116→- dialog "Cookie consent" [ref=e1] clickable [cursor:pointer]
+  1117→- dialog "Cookie preferences"
+  1118→  - heading "Cookie Preferences" [level=3, ref=e2]
+  1119→  - paragraph
+  1120→    - StaticText "Choose what you allow. Strictly necessary cookies may still be used even if you decline. The numbers below reflect only first-party cookies detected in your browser."
+  1121→  - button "Close" [ref=e3]
+  1122→    - StaticText "✕"
+  1123→  - generic
+  1124→    - StaticText "Current status"
+  1125→    - StaticText "—"
+  1126→    - StaticText "Cookies detected (first-party)"
+  1127→    - strong
+  1128→      - StaticText "2"
+  1129→    - generic
+  1130→      - StaticText "This counter only lists "
+  1131→      - strong
+  1132→        - StaticText "first-party"
+  1133→      - StaticText " cookies visible via "
+  1134→      - code
+  1135→        - StaticText "document.cookie"
+  1136→      - StaticText ". Depending on your browser or ad blocker, it may stay at 0 until cookies are set (usually after consent + reload). "
+  1137→      - strong
+  1138→        - StaticText "Third-party"
+  1139→      - StaticText " cookies are not detectable here."
+  1140→    - StaticText "Last updated"
+  1141→    - strong
+  1142→      - StaticText "—"
+  1143→  - paragraph
+  1144→    - StaticText " Analytics"
+  1145→  - generic
+  1146→    - StaticText "2"
+  1147→    - StaticText " detected • "
+  1148→    - StaticText "1/4"
+  1149→    - StaticText " known"
+  1150→  - LabelText
+  1151→    - checkbox "Analytics" [checked=false, ref=e7]
+  1152→  - paragraph
+  1153→    - StaticText "Measures site traffic (page views, visit duration, errors) to help improve the site. Example: Google Analytics or equivalent tags."
+  1154→  - group
+  1155→    - DisclosureTriangle "View detected cookies" [expanded=false]
+  1156→      - StaticText "View detected cookies"
+  1157→  - paragraph
+  1158→    - StaticText " Functional"
+  1159→  - generic
+  1160→    - StaticText "0"
+  1161→    - StaticText " detected • "
+  1162→    - StaticText "0/4"
+  1163→    - StaticText " known"
+  1164→  - LabelText
+  1165→    - checkbox "Functional" [checked=false, ref=e8]
+  1166→  - paragraph
+  1167→    - StaticText "Remembers your choices and enhances your experience (preferences, security, sessions). Disabling may degrade some features."
+  1168→  - group
+  1169→    - DisclosureTriangle "View detected cookies" [expanded=false]
+  1170→      - StaticText "View detected cookies"
+  1171→  - paragraph
+  1172→    - StaticText " Advertising"
+  1173→  - generic
+  1174→    - StaticText "0"
+  1175→    - StaticText " detected • "
+  1176→    - StaticText "0/5"
+  1177→    - StaticText " known"
+  1178→  - LabelText
+  1179→    - checkbox "Advertising" [checked=false, ref=e9]
+  1180→  - paragraph
+  1181→    - StaticText "Used to measure campaigns, limit repetition, and show more relevant ads (subject to your consent)."
+  1182→  - group
+  1183→    - DisclosureTriangle "View detected cookies" [expanded=false]
+  1184→      - StaticText "View detected cookies"
+  1185→  - paragraph
+  1186→    - StaticText "Security (always on)"
+  1187→  - StaticText "Anti-abuse protection, site security"
+  1188→  - StaticText "Enabled"
+  1189→  - paragraph
+  1190→    - StaticText "Some strictly necessary storage may be used to protect the site (e.g. fraud prevention / security)."
+  1191→  - paragraph
+  1192→    - StaticText "Unknown / Other"
+  1193→  - generic
+  1194→    - StaticText "0"
+  1195→    - StaticText " detected"
+  1196→  - StaticText "Info"
+  1197→  - paragraph
+  1198→    - StaticText "Cookies that don't match any known category. These may come from browser extensions, third-party scripts, or services not yet classified. Their origin is shown when possible."
+  1199→  - group
+  1200→    - DisclosureTriangle "View detected cookies" [expanded=false]
+  1201→      - StaticText "View detected cookies"
+  1202→  - paragraph
+  1203→    - StaticText " Third-Party Services"
+  1204→  - generic
+  1205→    - StaticText "6"
+  1206→    - StaticText " detected on page"
+  1207→  - StaticText "Scan"
+  1208→  - paragraph
+  1209→    - StaticText "Third-party scripts and services loaded on this page. These may set their own cookies which are not readable via "
+  1210→    - code
+  1211→      - StaticText "document.cookie"
+  1212→    - StaticText " due to browser security."
+  1213→  - group
+  1214→    - DisclosureTriangle "View detected services" [expanded=false]
+  1215→      - StaticText "View detected services"
+  1216→  - button "Accept All" [ref=e4]
+  1217→  - button "Decline All" [ref=e5]
+  1218→  - button "Save" [ref=e6]
+  1219→  - generic
+  1220→    - link "Privacy Policy" [ref=e10]
+  1221→    - StaticText " • "
+  1222→    - link "Change later" [ref=e11]
+  1223→  - button "Delete All Cookies" [ref=e12]

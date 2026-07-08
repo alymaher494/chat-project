@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Activity, Users, Hash, Server } from "lucide-react";
+import { ArrowRight, Copy, Check, Shield, Users, Eye, Lock, Hash } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface NetworkStats {
@@ -22,21 +22,17 @@ function AnimatedCounter({
   suffix?: string;
 }) {
   const [count, setCount] = useState(0);
-
   useEffect(() => {
-    let start = 0;
     const startTime = performance.now();
     const animate = (currentTime: number) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      start = Math.round(eased * target);
-      setCount(start);
+      setCount(Math.round(eased * target));
       if (progress < 1) requestAnimationFrame(animate);
     };
     requestAnimationFrame(animate);
   }, [target, duration]);
-
   return (
     <span>
       {count.toLocaleString()}
@@ -52,18 +48,52 @@ const defaultStats: NetworkStats = {
   uptime: "99.9%",
 };
 
+const terminalLines = [
+  { text: "$ ", cmd: "/connect irc.libraryirc.net +6697", type: "command" },
+  { text: "Resolving irc.libraryirc.net...", type: "info" },
+  { text: "\u2713 Connecting to 192.168.1.100:+6697", type: "success" },
+  { text: "\u2713 TLS handshake \u2014 TLS 1.3 [ECDHE-RSA-AES-256-GCM-SHA384]", type: "success" },
+  { text: "\u2713 SASL SCRAM-SHA-256 authentication successful", type: "success" },
+  { text: "\u2713 Welcome to the LibraryIRC Network \u2014 MOTD loaded", type: "success" },
+  { text: "\u2713 Joined #libraryirc \u2014 ", users: true, type: "success" },
+];
+
+const trustBadges = [
+  { icon: Lock, label: "Zero logging of private messages" },
+  { icon: Shield, label: "Community-driven moderation" },
+  { icon: Eye, label: "Privacy-first, no data harvesting" },
+  { icon: Users, label: "Open source & transparent" },
+];
+
 export function HeroSection() {
   const [stats, setStats] = useState<NetworkStats>(defaultStats);
+  const [copied, setCopied] = useState(false);
+  const [visibleLines, setVisibleLines] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     fetch("/api/stats")
       .then((res) => res.json())
-      .then((data) => {
-        if (data && data.users) setStats(data);
-      })
-      .catch(() => {
-        // Use default stats on fetch failure
-      });
+      .then((data) => { if (data?.users) setStats(data); })
+      .catch(() => {});
+  }, []);
+
+  // Typewriter effect for terminal lines
+  useEffect(() => {
+    setVisibleLines(0);
+    timerRef.current = setTimeout(() => setVisibleLines(1), 300);
+    for (let i = 1; i < terminalLines.length; i++) {
+      timerRef.current = setTimeout(() => setVisibleLines(i + 1), 300 + i * 180);
+    }
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
+  const copyCommand = useCallback(() => {
+    navigator.clipboard.writeText("/connect irc.libraryirc.net +6697");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   }, []);
 
   const scrollToApps = () => {
@@ -73,153 +103,161 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 pt-16 overflow-hidden"
+      className="relative pt-14 pb-0 overflow-hidden"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40" />
-      <div className="absolute inset-0 bg-radial-glow" />
-
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Badge */}
+      {/* Hero Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 pb-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 mb-8 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium">
-            <Activity className="size-3" />
-            <span>Network Online &mdash; InspIRCd v3.4.0</span>
-          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
+            Welcome to{" "}
+            <span className="text-primary">LibraryIRC</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
+            A modern, community-driven IRC network. Connect instantly, chat freely, and
+            join a network built on open-source technology and privacy-first principles.
+          </p>
         </motion.div>
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
-        >
-          The Modern{" "}
-          <span className="text-gradient-orange">IRC Network</span>
-          <br />
-          <span className="text-muted-foreground font-medium text-3xl sm:text-4xl md:text-5xl">
-            Real-time. Open. Yours.
-          </span>
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
+        {/* Terminal Block */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="max-w-3xl mb-4"
         >
-          LibraryIRC is a community-driven IRC network built for the modern era.
-          Choose from four web clients, connect instantly, and join the conversation.
-          No sign-ups. No trackers. Just chat.
-        </motion.p>
+          <div className="rounded-lg border border-border bg-card overflow-hidden">
+            {/* Terminal Header */}
+            <div className="flex items-center justify-between px-4 py-2 bg-muted/50 border-b border-border">
+              <div className="flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
+                <span className="text-xs text-muted-foreground ml-2 font-mono">Terminal</span>
+              </div>
+              <button
+                onClick={copyCommand}
+                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded hover:bg-muted/50"
+              >
+                {copied ? (
+                  <>
+                    <Check className="size-3 text-green-400" />
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <Copy className="size-3" />
+                    Copy command
+                  </>
+                )}
+              </button>
+            </div>
+            {/* Terminal Body */}
+            <div className="p-4 font-mono text-sm space-y-1.5 min-h-[200px]">
+              {terminalLines.slice(0, visibleLines).map((line, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -4 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  {line.type === "command" ? (
+                    <div className="flex items-center gap-1">
+                      <span className="text-green-400 select-none">{line.text}</span>
+                      <span className="text-foreground">{line.cmd}</span>
+                    </div>
+                  ) : line.type === "success" ? (
+                    <div className="text-emerald-400/90">
+                      {line.text}
+                      {line.users && (
+                        <span className="text-muted-foreground">{stats.users} users</span>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="text-muted-foreground">{line.text}</div>
+                  )}
+                </motion.div>
+              ))}
+              {visibleLines < terminalLines.length && (
+                <motion.span
+                  animate={{ opacity: [1, 0] }}
+                  transition={{ duration: 0.6, repeat: Infinity }}
+                  className="inline-block w-2 h-4 bg-primary"
+                />
+              )}
+            </div>
+          </div>
+        </motion.div>
 
-        {/* CTA Button */}
+        {/* No client link */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.8, duration: 0.5 }}
+          className="max-w-3xl mb-10"
+        >
+          <p className="text-sm text-muted-foreground">
+            No client?{" "}
+            <button
+              onClick={scrollToApps}
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              Try Web Chat <ArrowRight className="size-3" />
+            </button>
+          </p>
+        </motion.div>
+
+        {/* Trust Indicators */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="flex flex-wrap gap-x-6 gap-y-2 max-w-3xl mb-12"
+        >
+          {trustBadges.map((badge) => (
+            <div
+              key={badge.label}
+              className="flex items-center gap-2 text-xs text-muted-foreground"
+            >
+              <badge.icon className="size-3.5 text-primary" />
+              {badge.label}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Stats Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Button
-            onClick={scrollToApps}
-            size="lg"
-            className="h-14 px-8 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 glow-orange transition-all cursor-pointer"
-          >
-            Connect to Chat
-            <ArrowRight className="size-5" />
-          </Button>
-          <Button
-            onClick={() =>
-              document
-                .querySelector("#features")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            variant="outline"
-            size="lg"
-            className="h-14 px-8 text-base border-border hover:bg-muted/50 cursor-pointer"
-          >
-            Learn More
-          </Button>
-        </motion.div>
-
-        {/* Stats Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 sm:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-border pt-8"
         >
           {[
-            {
-              icon: Users,
-              label: "Users Online",
-              value: stats.users,
-              suffix: "+",
-            },
-            {
-              icon: Hash,
-              label: "Active Channels",
-              value: stats.channels,
-              suffix: "+",
-            },
-            {
-              icon: Server,
-              label: "Servers",
-              value: stats.servers,
-              suffix: "",
-            },
-            {
-              icon: Activity,
-              label: "Uptime",
-              value: 99.9,
-              suffix: "%",
-              isStatic: true,
-            },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center gap-2 p-4 sm:p-5 rounded-xl border border-border/50 bg-card/30 backdrop-blur-sm"
-            >
-              <stat.icon className="size-5 text-primary" />
-              <div className="text-2xl sm:text-3xl font-bold tracking-tight">
-                {stat.isStatic ? (
-                  `${stat.value}${stat.suffix}`
-                ) : (
-                  <AnimatedCounter
-                    target={stat.value}
-                    suffix={stat.suffix}
-                  />
-                )}
+            { icon: Users, label: "Users Online", value: stats.users, suffix: "+" },
+            { icon: Hash, label: "Channels", value: stats.channels, suffix: "+" },
+            { icon: Shield, label: "Servers", value: stats.servers, suffix: "" },
+            { icon: Shield, label: "Uptime", value: 99.9, suffix: "%", isStatic: true },
+          ].map((stat, i) => (
+            <div key={stat.label} className={`flex items-center gap-3 ${i < 2 ? "md:border-r md:border-border md:pr-4" : i === 2 ? "md:border-r md:border-border md:pr-4" : ""}`}>
+              <stat.icon className="size-5 text-primary shrink-0" />
+              <div>
+                <div className="text-xl sm:text-2xl font-bold tracking-tight">
+                  {stat.isStatic ? (
+                    `${stat.value}${stat.suffix}`
+                  ) : (
+                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                  )}
+                </div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wide">{stat.label}</div>
               </div>
-              <span className="text-xs sm:text-sm text-muted-foreground">
-                {stat.label}
-              </span>
             </div>
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-2 rounded-full bg-primary"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

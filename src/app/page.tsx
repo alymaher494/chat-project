@@ -1,7 +1,9 @@
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { FeaturesSection } from "@/components/features-section";
+import { ServicesSection } from "@/components/services-section";
 import { AppsSection } from "@/components/apps-section";
+import { HowItWorksSection } from "@/components/how-it-works-section";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -11,7 +13,9 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <FeaturesSection />
+        <ServicesSection />
         <AppsSection />
+        <HowItWorksSection />
       </main>
       <Footer />
     </div>
