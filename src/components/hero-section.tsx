@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Copy, Check, Shield, Users, Eye, Lock, Hash } from "lucide-react";
+import { ArrowRight, Copy, Check, Shield, Users, Eye, Lock, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface NetworkStats {
@@ -91,7 +91,7 @@ export function HeroSection() {
   }, []);
 
   const copyCommand = useCallback(() => {
-    navigator.clipboard.writeText("/connect irc.libraryirc.net +6697");
+    navigator.clipboard.writeText("/connect irc.libraryirc.net");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, []);
@@ -114,13 +114,21 @@ export function HeroSection() {
           className="max-w-3xl"
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
-            Welcome to{" "}
-            <span className="text-primary">LibraryIRC</span>
+            Your Gateway to <span className="text-primary">Open, Real-Time Conversations</span>
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
-            A modern, community-driven IRC network. Connect instantly, chat freely, and
-            join a network built on open-source technology and privacy-first principles.
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
+            Welcome to <span className="text-foreground font-semibold">LibraryIRC</span>—a free, secure, and resilient IRC network dedicated to bringing communities, developers, and chat enthusiasts together from all around the globe. <span className="text-primary font-semibold">No trackers, no bloat.</span> Just pure text communication.
           </p>
+          <div className="flex flex-wrap gap-3 mb-8">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <a href="irc://irc.libraryirc.net/">
+                <span className="mr-2">🚀</span> Connect to Chat
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="#apps">Explore Web Apps</a>
+            </Button>
+          </div>
         </motion.div>
 
         {/* Terminal Block */}
@@ -201,12 +209,12 @@ export function HeroSection() {
           className="max-w-3xl mb-10"
         >
           <p className="text-sm text-muted-foreground">
-            No client?{" "}
+            Prefer a browser-based experience?{" "}
             <button
               onClick={scrollToApps}
               className="text-primary hover:underline inline-flex items-center gap-1"
             >
-              Try Web Chat <ArrowRight className="size-3" />
+              Browse our web clients <ArrowRight className="size-3" />
             </button>
           </p>
         </motion.div>
@@ -234,25 +242,22 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-border pt-8"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-border pt-8"
         >
           {[
-            { icon: Users, label: "Users Online", value: stats.users, suffix: "+" },
-            { icon: Hash, label: "Channels", value: stats.channels, suffix: "+" },
-            { icon: Shield, label: "Servers", value: stats.servers, suffix: "" },
-            { icon: Shield, label: "Uptime", value: 99.9, suffix: "%", isStatic: true },
-          ].map((stat, i) => (
-            <div key={stat.label} className={`flex items-center gap-3 ${i < 2 ? "md:border-r md:border-border md:pr-4" : i === 2 ? "md:border-r md:border-border md:pr-4" : ""}`}>
-              <stat.icon className="size-5 text-primary shrink-0" />
-              <div>
-                <div className="text-xl sm:text-2xl font-bold tracking-tight">
-                  {stat.isStatic ? (
-                    `${stat.value}${stat.suffix}`
-                  ) : (
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  )}
+            { icon: Shield, label: "100% Free", detail: "Open Source Forever" },
+            { icon: Users, label: "24/7/365", detail: "Guaranteed Uptime" },
+            { icon: Globe, label: "Global", detail: "Multi-Region Servers" },
+          ].map((stat) => (
+            <div key={stat.label} className="rounded-lg border border-border/60 bg-card/30 px-4 py-4">
+              <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <stat.icon className="size-4.5" />
                 </div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wide">{stat.label}</div>
+                <div>
+                  <div className="text-lg font-semibold tracking-tight text-foreground">{stat.label}</div>
+                  <div className="text-sm text-muted-foreground">{stat.detail}</div>
+                </div>
               </div>
             </div>
           ))}

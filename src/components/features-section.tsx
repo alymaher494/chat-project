@@ -1,60 +1,41 @@
 "use client";
 
-import {
-  Zap,
-  Shield,
-  Users,
-  Lock,
-  Globe,
-  Code2,
-} from "lucide-react";
-import { motion } from "framer-motion";
+import { Zap, Shield, Users, Globe } from "lucide-react";
+import { motion, Variants } from "framer-motion";
 
 const features = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description:
-      "Low-latency connections optimized for speed. Real-time messaging powered by IRC protocol with zero bloat.",
-  },
-  {
     icon: Shield,
-    title: "Secure & Private",
+    title: "Absolute Privacy & Security",
     description:
-      "TLS encryption on all connections, SASL authentication, and privacy-first policies to keep your conversations safe.",
-  },
-  {
-    icon: Lock,
-    title: "Privacy by Principle",
-    description:
-      "We do not log private messages. Clear, transparent privacy standards protect every personal conversation on our network.",
+      "Your data belongs to you. We respect your anonymity with fully encrypted connection options, secure channel modes, and a strict no-tracking policy.",
   },
   {
     icon: Users,
-    title: "Community Driven",
+    title: "Community-Driven Ecosystem",
     description:
-      "Built by and for the community with open-source tools, active support channels, and transparent network operations.",
+      "Whether you are looking to host an official project channel, run a community hub, or just hang out with friends, LibraryIRC provides the perfect space to grow your community.",
   },
   {
     icon: Globe,
-    title: "IRCv3 Support",
+    title: "Dynamic Web Clients",
     description:
-      "Modern protocol extensions including SASL, message tags, server-time, account-tracking, and batch capabilities.",
+      "No need to install heavy software. Access our network instantly from any modern web browser using our curated selection of high-performance, responsive web clients.",
   },
   {
-    icon: Code2,
-    title: "Open Source",
+    icon: Zap,
+    title: "24/7 Stability & Support",
     description:
-      "Built on InspIRCd core and Atheme Services. Fully open-source stack with no vendor lock-in or hidden dependencies.",
+      "Built on time-tested architecture, our network ensures maximum uptime. Need help? Our dedicated operators and helpdesk are always around to assist you.",
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.06 } },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
@@ -72,12 +53,10 @@ export function FeaturesSection() {
           className="mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-            Why LibraryIRC
+            Why <span className="text-primary">LibraryIRC</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            Everything you need for a great IRC experience. LibraryIRC is an independent
-            network built for those who value privacy, speed, and open communication.
-            No corporate oversight. No data harvesting. No algorithmic manipulation.
+            We believe real conversation should feel calm, open, and human. LibraryIRC is a community-first network built for privacy, freedom of speech, and a genuinely enjoyable user experience.
           </p>
         </motion.div>
 
@@ -87,7 +66,7 @@ export function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
           {features.map((feature) => (
             <motion.div

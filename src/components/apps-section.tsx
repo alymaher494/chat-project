@@ -17,63 +17,67 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const clients = [
   {
-    name: "Gamja",
-    tagline: "Modern & Minimalist",
+    name: "Gamja Client",
+    tagline: "Recommended & Modern",
     description:
-      "A sleek, lightweight IRC client built with vanilla JavaScript. Clean UI with zero clutter — fast to load, easy to use, and no setup required.",
+      "An ultra-lightweight, high-performance web interface. Optimized for low-bandwidth, lightning-fast loading, and a clean, clutter-free chatting environment. Perfect for quick connections.",
     url: "https://gamja.libraryirc.net",
     icon: MonitorSmartphone,
     status: "new" as const,
+    buttonLabel: "Launch Gamja Chat",
     features: [
-      "Ultra-lightweight & fast loading",
-      "Clean, minimal interface",
-      "File uploads & link previews",
-      "No dependencies — just works",
+      "Fast on low-bandwidth connections",
+      "Clean, distraction-free layout",
+      "Great for quick conversations",
+      "No heavy setup required",
     ],
   },
   {
-    name: "Obby",
-    tagline: "Next-Gen React Client",
+    name: "Obby Client",
+    tagline: "Next-Gen Interface",
     description:
-      "Built on React and the Next.js stack. A modern, component-driven interface with cutting-edge web technology and a sleek design.",
+      "A gorgeous, modern web client built on cutting-edge web technologies. Features a sleek dashboard layout, smooth responsive animations, and a premium visual aesthetic.",
     url: "https://obby.libraryirc.net",
     icon: Layers,
     status: "new" as const,
+    buttonLabel: "Launch Obby Chat",
     features: [
-      "React & Next.js powered",
-      "Modern messaging features",
-      "SASL & IRCv3 support",
-      "Mobile-responsive dark theme",
+      "Elegant, polished interface",
+      "Smooth and responsive experience",
+      "Built for modern browsers",
+      "A premium feel without the fuss",
     ],
   },
   {
     name: "The Lounge",
-    tagline: "Feature-Rich & Persistent",
+    tagline: "Feature-Rich",
     description:
-      "The most full-featured web IRC client. Stay connected 24/7 — your session persists even when you close the browser with push notifications and message history.",
+      "A modern self-hosted chat client that stays connected in the background. It remembers where you left off, supports rich media previews, push notifications, and multiple layouts.",
     url: "https://lounge.libraryirc.net",
     icon: MessageSquare,
     status: "stable" as const,
+    buttonLabel: "Launch The Lounge",
     features: [
-      "Always-on — never miss a message",
-      "Push notifications & history",
-      "Link previews & inline media",
-      "Multi-channel tabbed interface",
+      "Stay connected in the background",
+      "Rich media previews and history",
+      "Helpful notifications",
+      "Flexible layouts for every mood",
     ],
   },
   {
     name: "KiwiIRC",
-    tagline: "Classic Web Chat",
+    tagline: "Classic Chat",
     description:
-      "The original web IRC experience. Simple, reliable, and familiar — a trusted choice for IRC communities worldwide with full IRCv3 support.",
+      "The time-tested, familiar, and highly reliable web chat client. Intuitive for IRC newcomers and packed with all the standard features a veteran chatter expects.",
     url: "https://kiwi.libraryirc.net",
     icon: Radio,
     status: "legacy" as const,
+    buttonLabel: "Launch Classic Kiwi",
     features: [
-      "Full IRCv3 capability support",
-      "Multi-channel tabs & bookmarks",
-      "SASL authentication",
-      "File uploads & media preview",
+      "Familiar and dependable",
+      "Easy for newcomers",
+      "All the essentials in one place",
+      "A trusted classic experience",
     ],
   },
 ];
@@ -105,11 +109,10 @@ export function AppsSection() {
           className="mb-8"
         >
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-            Choose Your Web Client
+            Choose Your <span className="text-primary">Chat Experience</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            Connect to LibraryIRC instantly from your browser. Pick the client that suits
-            you best — no downloads or plugins needed. All clients connect to the same network.
+            We believe in choice. LibraryIRC offers multiple web interfaces tailored to your preferences—whether you prefer an ultra-minimalist single-page chat or a feature-rich client with persistent bouncers.
           </p>
         </motion.div>
 
@@ -201,7 +204,7 @@ export function AppsSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Launch Web Chat
+                        {client.buttonLabel}
                         <ExternalLink className="size-3.5" />
                       </a>
                     </Button>
@@ -241,10 +244,7 @@ export function AppsSection() {
                       ))}
                     </div>
                     <p className="text-[11px] text-muted-foreground mt-4 leading-relaxed">
-                      All clients connect to{" "}
-                      <code className="px-1 py-0.5 rounded bg-muted/60 text-[10px] font-mono">
-                        irc.libraryirc.net:+6697
-                      </code>
+                      All clients connect to the same open, welcoming network—just choose the interface that feels right for you.
                     </p>
                   </div>
                 </div>
