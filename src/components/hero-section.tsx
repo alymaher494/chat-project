@@ -20,13 +20,13 @@ const defaultStats: NetworkStats = {
 };
 
 const terminalLines = [
-  { text: "$ ", cmd: "/connect irc.libraryirc.net +6697", type: "command" },
-  { text: "Resolving irc.libraryirc.net...", type: "info" },
-  { text: "\u2713 Connecting to 192.168.1.100:+6697", type: "success" },
-  { text: "\u2713 TLS handshake \u2014 TLS 1.3 [ECDHE-RSA-AES-256-GCM-SHA384]", type: "success" },
-  { text: "\u2713 SASL SCRAM-SHA-256 authentication successful", type: "success" },
-  { text: "\u2713 Welcome to the LibraryIRC Network \u2014 MOTD loaded", type: "success" },
-  { text: "\u2713 Joined #libraryirc \u2014 ", users: true, type: "success" },
+  { text: "$ ", cmd: "/join #general", type: "command" },
+  { text: "» Joined #general (Topic: Welcome to LibraryIRC!)", type: "success" },
+  { user: "Alice", text: "Hey everyone! Welcome to LibraryIRC 💬", type: "message" },
+  { user: "Bob", text: "Is this really anonymous?", type: "message" },
+  { user: "System", text: "Yes! Zero logging, zero trackers, pure chat.", type: "success" },
+  { text: "$ ", cmd: "/msg Alice Hello from the terminal!", type: "command" },
+  { user: "You", text: "Hello from the terminal!", type: "message" },
 ];
 
 const trustBadges = [
@@ -166,12 +166,14 @@ export function HeroSection() {
                         <span className="text-green-400 select-none">{line.text}</span>
                         <span className="text-foreground">{line.cmd}</span>
                       </div>
+                    ) : line.type === "message" ? (
+                      <div className="flex items-start gap-1.5">
+                        <span className="text-primary font-medium select-none">&lt;{line.user}&gt;</span>
+                        <span className="text-foreground">{line.text}</span>
+                      </div>
                     ) : line.type === "success" ? (
                       <div className="text-emerald-400/90">
                         {line.text}
-                        {line.users && (
-                          <span className="text-muted-foreground">{stats.users} users</span>
-                        )}
                       </div>
                     ) : (
                       <div className="text-muted-foreground">{line.text}</div>
