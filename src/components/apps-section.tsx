@@ -109,10 +109,10 @@ export function AppsSection() {
           className="mb-8"
         >
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-            Choose Your <span className="text-primary">Chat Experience</span>
+            Choose Your <span className="text-primary">Chat Portal</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            We believe in choice. LibraryIRC offers multiple web interfaces tailored to your preferences—whether you prefer an ultra-minimalist single-page chat or a feature-rich client with persistent bouncers.
+            Whether you want an ultra-fast minimalist window or a fully customized dashboard with rich media previews, choose the app that fits your style and dive into the rooms.
           </p>
         </motion.div>
 

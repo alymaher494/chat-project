@@ -1,56 +1,32 @@
 "use client";
 
-import { User, Hash, Bot, AtSign, Mail, Globe, HelpCircle, ShieldCheck } from "lucide-react";
+import { MessageSquare, Coffee, HelpCircle, Users } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
-const services = [
+const chatRooms = [
   {
-    icon: User,
-    name: "NickServ",
+    icon: MessageSquare,
+    name: "#TheLobby",
     description:
-      "Register and protect your nickname, manage passwords, set up email recovery, and group multiple nicks under one account.",
+      "The main meeting point. Perfect for general chit-chat, making new friends, and casual daily conversations.",
   },
   {
-    icon: Hash,
-    name: "ChanServ",
+    icon: Coffee,
+    name: "#CyberCafe",
     description:
-      "Register channels, manage access lists, set auto-ops, configure topic locks, and control channel modes with ease.",
-  },
-  {
-    icon: Bot,
-    name: "BotServ",
-    description:
-      "Assign network bots to your channel for automated moderation, greetings, fantasy commands, and custom responses.",
-  },
-  {
-    icon: AtSign,
-    name: "HostServ",
-    description:
-      "Request and manage virtual hosts (vhosts) to customize your displayed hostname and mask your real address on the network.",
-  },
-  {
-    icon: Mail,
-    name: "MemoServ",
-    description:
-      "Send and receive offline messages to other registered users. Read, delete, and manage your memos from anywhere.",
-  },
-  {
-    icon: Globe,
-    name: "Global",
-    description:
-      "Network-wide announcement service used by staff to broadcast important messages, maintenance notices, and policy updates.",
+      "Where developers, tech enthusiasts, and Linux geeks gather to discuss coding, networks, and the future of technology.",
   },
   {
     icon: HelpCircle,
-    name: "HelpServ",
+    name: "#Helpdesk",
     description:
-      "Automated help system providing quick reference guides, command syntax, and usage tips for all IRC services.",
+      "Need assistance with the network, setting up your own client, or registering a channel? Our operators are here 24/7.",
   },
   {
-    icon: ShieldCheck,
-    name: "OperServ",
+    icon: Users,
+    name: "#ChitChat",
     description:
-      "Network operations service for administrators. Manage server connections, AKILL lists, SGLINES, and network-wide settings.",
+      "A relaxed environment for sharing music, movies, quotes, and hanging out with a global community.",
   },
 ];
 
@@ -77,15 +53,14 @@ export function ServicesSection() {
           className="mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-            Powered by Atheme Services
+            Popular Chat Rooms
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            Everything you need to manage identity, channels, bots, and network tools.
-            Atheme Services provides a complete suite for IRC account and channel management.
+            Jump into some of our most active community rooms. No matter what your interests are, there's a space for you.
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Rooms Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -93,20 +68,20 @@ export function ServicesSection() {
           viewport={{ once: true, margin: "-60px" }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
-          {services.map((service) => (
+          {chatRooms.map((room) => (
             <motion.div
-              key={service.name}
+              key={room.name}
               variants={itemVariants}
-              className="p-4 rounded-lg border border-border/50 bg-card/20 hover:bg-card/40 transition-colors duration-200"
+              className="p-5 rounded-lg border border-border/50 bg-card/20 hover:bg-card/40 transition-colors duration-200"
             >
               <div className="flex items-center gap-2.5 mb-2.5">
                 <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 text-primary shrink-0">
-                  <service.icon className="size-4" />
+                  <room.icon className="size-4.5" />
                 </div>
-                <h3 className="font-semibold text-sm">{service.name}</h3>
+                <h3 className="font-semibold text-sm text-primary">{room.name}</h3>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                {service.description}
+                {room.description}
               </p>
             </motion.div>
           ))}
@@ -120,12 +95,12 @@ export function ServicesSection() {
           transition={{ delay: 0.3, duration: 0.4 }}
           className="mt-6 text-sm text-muted-foreground"
         >
-          Need help with services?{" "}
+          Looking for a specific topic? Connect to find more rooms or ask in{" "}
           <a
-            href="irc://irc.libraryirc.net/%23help"
-            className="text-primary hover:underline"
+            href="irc://irc.libraryirc.net/%23helpdesk"
+            className="text-primary hover:underline font-semibold"
           >
-            Ask in #help
+            #Helpdesk
           </a>
         </motion.p>
       </div>

@@ -74,165 +74,155 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-14 pb-0 overflow-hidden"
+      className="relative pt-14 pb-0 overflow-hidden min-h-[90vh] flex items-center"
     >
+      {/* Background glow effects */}
+      <div className="absolute inset-0 -z-10 bg-radial-[circle_at_50%_-20%] from-primary/10 via-background to-background" />
+
       {/* Hero Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 pb-10">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">
-            Your Gateway to <span className="text-primary">Open, Real-Time Conversations</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
-            Welcome to <span className="text-foreground font-semibold">LibraryIRC</span>—a free, secure, and resilient IRC network dedicated to bringing communities, developers, and chat enthusiasts together from all around the globe. <span className="text-primary font-semibold">No trackers, no bloat.</span> Just pure text communication.
-          </p>
-          <div className="flex flex-wrap gap-3 mb-8">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <a href="irc://irc.libraryirc.net/">
-                <span className="mr-2">🚀</span> Connect to Chat
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="#apps">Explore Web Apps</a>
-            </Button>
-          </div>
-        </motion.div>
-
-        {/* Terminal Block */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-3xl mb-4"
-        >
-          <div className="rounded-lg border border-border bg-card overflow-hidden">
-            {/* Terminal Header */}
-            <div className="flex items-center justify-between px-4 py-2 bg-muted/50 border-b border-border">
-              <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
-                <span className="text-xs text-muted-foreground ml-2 font-mono">Terminal</span>
-              </div>
-              <button
-                onClick={copyCommand}
-                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors px-2 py-1 rounded hover:bg-muted/50"
-              >
-                {copied ? (
-                  <>
-                    <Check className="size-3 text-green-400" />
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <Copy className="size-3" />
-                    Copy command
-                  </>
-                )}
-              </button>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
+              Vintage Chatting, <span className="text-primary">Modern Experience.</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
+              Welcome to <span className="text-foreground font-semibold">LibraryIRC</span>—the ultimate network of free, anonymous, and real-time chat rooms. No registration required, no algorithms tracking you, and absolutely no bloat. Just step in, choose a room, and start chatting with amazing people worldwide.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-8">
+              <Button onClick={scrollToApps} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 py-6 text-base">
+                💬 Enter Chat Rooms Now
+              </Button>
+              <Button onClick={scrollToApps} variant="outline" size="lg" className="font-medium px-6 py-6 text-base">
+                View Available Apps
+              </Button>
             </div>
-            {/* Terminal Body */}
-            <div className="p-4 font-mono text-sm space-y-1.5 min-h-[200px]">
-              {terminalLines.slice(0, visibleLines).map((line, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -4 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.15 }}
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mt-4">
+              {trustBadges.map((badge) => (
+                <div
+                  key={badge.label}
+                  className="flex items-center gap-2 text-xs text-muted-foreground font-medium"
                 >
-                  {line.type === "command" ? (
-                    <div className="flex items-center gap-1">
-                      <span className="text-green-400 select-none">{line.text}</span>
-                      <span className="text-foreground">{line.cmd}</span>
-                    </div>
-                  ) : line.type === "success" ? (
-                    <div className="text-emerald-400/90">
-                      {line.text}
-                      {line.users && (
-                        <span className="text-muted-foreground">{stats.users} users</span>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="text-muted-foreground">{line.text}</div>
-                  )}
-                </motion.div>
+                  <badge.icon className="size-4 text-primary" />
+                  {badge.label}
+                </div>
               ))}
-              {visibleLines < terminalLines.length && (
-                <motion.span
-                  animate={{ opacity: [1, 0] }}
-                  transition={{ duration: 0.6, repeat: Infinity }}
-                  className="inline-block w-2 h-4 bg-primary"
-                />
-              )}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* No client link */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.8, duration: 0.5 }}
-          className="max-w-3xl mb-10"
-        >
-          <p className="text-sm text-muted-foreground">
-            Prefer a browser-based experience?{" "}
-            <button
-              onClick={scrollToApps}
-              className="text-primary hover:underline inline-flex items-center gap-1"
-            >
-              Browse our web clients <ArrowRight className="size-3" />
-            </button>
-          </p>
-        </motion.div>
-
-        {/* Trust Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-wrap gap-x-6 gap-y-2 max-w-3xl mb-12"
-        >
-          {trustBadges.map((badge) => (
-            <div
-              key={badge.label}
-              className="flex items-center gap-2 text-xs text-muted-foreground"
-            >
-              <badge.icon className="size-3.5 text-primary" />
-              {badge.label}
+          {/* Right Column: Terminal Retro Interface */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="lg:col-span-5 w-full"
+          >
+            <div className="rounded-xl border border-border/80 bg-card/60 backdrop-blur-md overflow-hidden shadow-2xl shadow-primary/5">
+              {/* Terminal Header */}
+              <div className="flex items-center justify-between px-4 py-3 bg-muted/30 border-b border-border/50">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/70" />
+                  <span className="text-xs text-muted-foreground ml-2 font-mono">connection_wizard.exe</span>
+                </div>
+                <button
+                  onClick={copyCommand}
+                  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors px-2.5 py-1 rounded hover:bg-muted/50 font-medium"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="size-3.5 text-green-400" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="size-3.5" />
+                      Copy host
+                    </>
+                  )}
+                </button>
+              </div>
+              {/* Terminal Body */}
+              <div className="p-5 font-mono text-xs sm:text-sm space-y-2 min-h-[220px] bg-black/40">
+                {terminalLines.slice(0, visibleLines).map((line, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -4 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    {line.type === "command" ? (
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-green-400 select-none">{line.text}</span>
+                        <span className="text-foreground">{line.cmd}</span>
+                      </div>
+                    ) : line.type === "success" ? (
+                      <div className="text-emerald-400/90">
+                        {line.text}
+                        {line.users && (
+                          <span className="text-muted-foreground">{stats.users} users</span>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="text-muted-foreground">{line.text}</div>
+                    )}
+                  </motion.div>
+                ))}
+                {visibleLines < terminalLines.length && (
+                  <motion.span
+                    animate={{ opacity: [1, 0] }}
+                    transition={{ duration: 0.6, repeat: Infinity }}
+                    className="inline-block w-2.5 h-4 bg-primary"
+                  />
+                )}
+              </div>
             </div>
-          ))}
-        </motion.div>
+
+            {/* Retro Connection Note */}
+            <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground px-1">
+              <span>Host: irc.libraryirc.net</span>
+              <span>Port: 6697 (SSL)</span>
+            </div>
+          </motion.div>
+
+        </div>
 
         {/* Stats Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-border pt-8"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-border/60 pt-10 mt-16"
         >
           {[
-            { icon: Shield, label: "100% Free", detail: "Open Source Forever" },
-            { icon: Users, label: "24/7/365", detail: "Guaranteed Uptime" },
-            { icon: Globe, label: "Global", detail: "Multi-Region Servers" },
+            { icon: Shield, label: "100% Anonymous", detail: "No Account Needed" },
+            { icon: Users, label: "Real-time Rooms", detail: "Chat Instantly" },
+            { icon: Globe, label: "Global Reach", detail: "Meet People Anywhere" },
           ].map((stat) => (
-            <div key={stat.label} className="rounded-lg border border-border/60 bg-card/30 px-4 py-4">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <stat.icon className="size-4.5" />
+            <div key={stat.label} className="rounded-xl border border-border/40 bg-card/20 hover:bg-card/30 transition-all duration-300 px-5 py-4">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary shrink-0">
+                  <stat.icon className="size-5" />
                 </div>
                 <div>
-                  <div className="text-lg font-semibold tracking-tight text-foreground">{stat.label}</div>
+                  <div className="text-base font-bold tracking-tight text-foreground">{stat.label}</div>
                   <div className="text-sm text-muted-foreground">{stat.detail}</div>
                 </div>
               </div>
             </div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );

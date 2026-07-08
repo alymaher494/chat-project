@@ -1,32 +1,26 @@
 "use client";
 
-import { Zap, Shield, Users, Globe } from "lucide-react";
+import { Shield, Globe, Layers } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 const features = [
   {
     icon: Shield,
-    title: "Absolute Privacy & Security",
+    title: "100% Anonymous & Secure",
     description:
-      "Your data belongs to you. We respect your anonymity with fully encrypted connection options, secure channel modes, and a strict no-tracking policy.",
-  },
-  {
-    icon: Users,
-    title: "Community-Driven Ecosystem",
-    description:
-      "Whether you are looking to host an official project channel, run a community hub, or just hang out with friends, LibraryIRC provides the perfect space to grow your community.",
+      "No email, phone number, or real-name registration required. Enter a nickname and you're instantly in. Your privacy is protected by default.",
   },
   {
     icon: Globe,
-    title: "Dynamic Web Clients",
+    title: "Persistent & Always Online",
     description:
-      "No need to install heavy software. Access our network instantly from any modern web browser using our curated selection of high-performance, responsive web clients.",
+      "Our chat rooms never sleep. Whether you access them through a simple web browser or a persistent terminal app, the conversation is always active.",
   },
   {
-    icon: Zap,
-    title: "24/7 Stability & Support",
+    icon: Layers,
+    title: "Complete Freedom of Choice",
     description:
-      "Built on time-tested architecture, our network ensures maximum uptime. Need help? Our dedicated operators and helpdesk are always around to assist you.",
+      "We offer multiple beautifully tailored web apps (Gamja, Obby, The Lounge, Kiwi) so you can experience the chat rooms exactly the way you want.",
   },
 ];
 
@@ -53,10 +47,10 @@ export function FeaturesSection() {
           className="mb-10"
         >
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-            Why <span className="text-primary">LibraryIRC</span>
+            Why Choose Us?
           </h2>
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            We believe real conversation should feel calm, open, and human. LibraryIRC is a community-first network built for privacy, freedom of speech, and a genuinely enjoyable user experience.
+            LibraryIRC brings back the simplicity of the early internet chat rooms with modern speeds, interfaces, and absolute security.
           </p>
         </motion.div>
 
@@ -66,19 +60,19 @@ export function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group p-5 rounded-lg border border-border/60 bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-200"
+              className="group p-6 rounded-xl border border-border/60 bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-200"
             >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <feature.icon className="size-4.5" />
+              <div className="flex items-center gap-3.5 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <feature.icon className="size-5" />
                 </div>
-                <h3 className="font-semibold text-sm">{feature.title}</h3>
+                <h3 className="font-bold text-base">{feature.title}</h3>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {feature.description}
