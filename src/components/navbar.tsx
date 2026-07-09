@@ -30,7 +30,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -73,7 +73,7 @@ export function Navbar() {
         >
           <Hash className="size-5 text-primary" strokeWidth={2.5} />
           <span className="font-bold text-base tracking-tight">
-            Library<span className="text-primary">IRC</span>
+            Libra<span className="text-primary">IRC</span>
           </span>
         </a>
 
