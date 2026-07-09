@@ -7,7 +7,7 @@ const steps = [
     number: "1",
     title: "Pick a Client",
     description:
-      "Choose any of the web chat clients above. They all connect to the same LibraryIRC network.",
+      "Choose any of the web chat clients above. They all connect to the same LibraIRC network.",
   },
   {
     number: "2",
@@ -19,7 +19,7 @@ const steps = [
     number: "3",
     title: "Join a Channel",
     description:
-      "You'll be dropped into #libraryirc by default. From there you can join any channel or explore the full list.",
+      "You'll be dropped into #librairc by default. From there you can join any channel or explore the full list.",
   },
   {
     number: "4",
@@ -102,7 +102,7 @@ export function HowItWorksSection() {
         >
           Prefer a desktop client? Connect with{" "}
           <code className="px-1.5 py-0.5 rounded bg-muted/60 text-xs font-mono">
-            /server irc.libraryirc.net +6697
+            /server irc.librairc.net +6697
           </code>
         </motion.p>
       </div>

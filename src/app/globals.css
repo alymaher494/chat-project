@@ -56,12 +56,12 @@
   --orange-muted: oklch(0.705 0.213 47.604 / 12%);
 
   /* Backgrounds */
-  --background: oklch(0.07 0.005 285.83);
-  --foreground: oklch(0.95 0.01 285.83);
-  --card: oklch(0.11 0.005 285.83);
-  --card-foreground: oklch(0.95 0.01 285.83);
-  --popover: oklch(0.11 0.005 285.83);
-  --popover-foreground: oklch(0.95 0.01 285.83);
+  --background: #0b132b;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
 
   /* Primary = Orange */
   --primary: oklch(0.705 0.213 47.604);

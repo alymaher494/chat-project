@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "LibraryIRC",
+  name: "LibraIRC",
   tagline: "Modern IRC network for community-driven chat",
   description:
-    "Connect to LibraryIRC, a modern IRC network with multiple web clients, real-time channels, and a welcoming community.",
-  url: "https://libraryircnet.vercel.app",
+    "Connect to LibraIRC, a modern IRC network with multiple web clients, real-time channels, and a welcoming community.",
+  url: "https://libraircnet.vercel.app",
   keywords: [
-    "LibraryIRC",
+    "LibraIRC",
     "IRC",
     "IRC chat",
     "web IRC client",
@@ -23,8 +23,8 @@ export const siteConfig = {
     { label: "How it Works", href: "#how-it-works" },
   ],
   contact: {
-    email: "support@libraryirc.net",
-    ircServer: "irc.libraryirc.net",
+    email: "support@librairc.net",
+    ircServer: "irc.librairc.net",
     ircPort: 6697,
   },
   social: {

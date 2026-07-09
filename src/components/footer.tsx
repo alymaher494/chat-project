@@ -10,14 +10,14 @@ const footerNav = {
     { label: "Web Clients", href: "#apps" },
   ],
   Clients: [
-    { label: "Gamja", href: "https://gamja.libraryirc.net", external: true },
-    { label: "Obby", href: "https://obby.libraryirc.net", external: true },
-    { label: "The Lounge", href: "https://lounge.libraryirc.net", external: true },
-    { label: "KiwiIRC", href: "https://kiwi.libraryirc.net", external: true },
+    { label: "Gamja", href: "https://gamja.librairc.net", external: true },
+    { label: "Obby", href: "https://obby.librairc.net", external: true },
+    { label: "The Lounge", href: "https://lounge.librairc.net", external: true },
+    { label: "KiwiIRC", href: "https://kiwi.librairc.net", external: true },
   ],
   Resources: [
     { label: "IRC Commands", href: "#how-it-works" },
-    { label: "Help / Support", href: "irc://irc.libraryirc.net/%23help" },
+    { label: "Help / Support", href: "irc://irc.librairc.net/%23help" },
     { label: "GitHub", href: "https://github.com", external: true },
   ],
 };
@@ -53,7 +53,7 @@ export function Footer() {
                 <Github className="size-4" />
               </a>
               <a
-                href="mailto:admin@libraryirc.net"
+                href="mailto:admin@librairc.net"
                 className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
                 aria-label="Email"
               >
@@ -95,7 +95,7 @@ export function Footer() {
           </h4>
           <div className="flex flex-wrap gap-3">
             <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border/50 bg-card/20 text-sm">
-              <code className="font-mono text-xs">irc.libraryirc.net</code>
+              <code className="font-mono text-xs">irc.librairc.net</code>
             </div>
             <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border/50 bg-card/20 text-sm">
               <code className="font-mono text-xs">+6697</code>
@@ -111,7 +111,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground">
-            &copy; {currentYear} LibraryIRC Network. All rights reserved.
+            &copy; {currentYear} LibraIRC Network. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Powered by{" "}

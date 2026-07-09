@@ -21,8 +21,8 @@ const defaultStats: NetworkStats = {
 
 const terminalLines = [
   { text: "$ ", cmd: "/join #general", type: "command" },
-  { text: "» Joined #general (Topic: Welcome to LibraryIRC!)", type: "success" },
-  { user: "Alice", text: "Hey everyone! Welcome to LibraryIRC 💬", type: "message" },
+  { text: "» Joined #general (Topic: Welcome to LibraIRC!)", type: "success" },
+  { user: "Alice", text: "Hey everyone! Welcome to LibraIRC 💬", type: "message" },
   { user: "Bob", text: "Is this really anonymous?", type: "message" },
   { user: "System", text: "Yes! Zero logging, zero trackers, pure chat.", type: "success" },
   { text: "$ ", cmd: "/msg Alice Hello from the terminal!", type: "command" },
@@ -62,7 +62,7 @@ export function HeroSection() {
   }, []);
 
   const copyCommand = useCallback(() => {
-    navigator.clipboard.writeText("/connect irc.libraryirc.net");
+    navigator.clipboard.writeText("/connect irc.librairc.net");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, []);
@@ -90,17 +90,17 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7 flex flex-col justify-center"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-6">
               Vintage Chatting, <span className="text-primary">Modern Experience.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
-              Welcome to <span className="text-foreground font-semibold">LibraryIRC</span>—the ultimate network of free, anonymous, and real-time chat rooms. No registration required, no algorithms tracking you, and absolutely no bloat. Just step in, choose a room, and start chatting with amazing people worldwide.
+            <p className="text-xl sm:text-2xl text-muted-foreground font-medium leading-relaxed mb-8">
+              Welcome to <span className="text-foreground font-semibold">LibraIRC</span>—the ultimate network of free, anonymous, and real-time chat rooms. No registration required, no algorithms tracking you, and absolutely no bloat. Just step in, choose a room, and start chatting with amazing people worldwide.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button onClick={scrollToApps} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 py-6 text-base">
+              <Button onClick={scrollToApps} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8 py-7 text-lg">
                 💬 Enter Chat Rooms Now
               </Button>
-              <Button onClick={scrollToApps} variant="outline" size="lg" className="font-medium px-6 py-6 text-base">
+              <Button onClick={scrollToApps} variant="outline" size="lg" className="font-bold px-8 py-7 text-lg">
                 View Available Apps
               </Button>
             </div>
@@ -110,7 +110,7 @@ export function HeroSection() {
               {trustBadges.map((badge) => (
                 <div
                   key={badge.label}
-                  className="flex items-center gap-2 text-xs text-muted-foreground font-medium"
+                  className="flex items-center gap-2 text-sm text-muted-foreground font-bold"
                 >
                   <badge.icon className="size-4 text-primary" />
                   {badge.label}
@@ -191,8 +191,8 @@ export function HeroSection() {
             </div>
 
             {/* Retro Connection Note */}
-            <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground px-1">
-              <span>Host: irc.libraryirc.net</span>
+            <div className="mt-4 flex items-center justify-between text-sm font-medium text-muted-foreground px-1">
+              <span>Host: irc.librairc.net</span>
               <span>Port: 6697 (SSL)</span>
             </div>
           </motion.div>
@@ -217,8 +217,8 @@ export function HeroSection() {
                   <stat.icon className="size-5" />
                 </div>
                 <div>
-                  <div className="text-base font-bold tracking-tight text-foreground">{stat.label}</div>
-                  <div className="text-sm text-muted-foreground">{stat.detail}</div>
+                  <div className="text-xl font-black tracking-tight text-foreground">{stat.label}</div>
+                  <div className="text-base font-medium text-muted-foreground">{stat.detail}</div>
                 </div>
               </div>
             </div>

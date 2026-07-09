@@ -97,7 +97,7 @@ export function ServicesSection() {
         >
           Looking for a specific topic? Connect to find more rooms or ask in{" "}
           <a
-            href="irc://irc.libraryirc.net/%23helpdesk"
+            href="irc://irc.librairc.net/%23helpdesk"
             className="text-primary hover:underline font-semibold"
           >
             #Helpdesk

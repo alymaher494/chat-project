@@ -21,7 +21,7 @@ const clients = [
     tagline: "Recommended & Modern",
     description:
       "An ultra-lightweight, high-performance web interface. Optimized for low-bandwidth, lightning-fast loading, and a clean, clutter-free chatting environment. Perfect for quick connections.",
-    url: "https://gamja.libraryirc.net",
+    url: "https://gamja.librairc.net",
     icon: MonitorSmartphone,
     status: "new" as const,
     buttonLabel: "Launch Gamja Chat",
@@ -37,7 +37,7 @@ const clients = [
     tagline: "Next-Gen Interface",
     description:
       "A gorgeous, modern web client built on cutting-edge web technologies. Features a sleek dashboard layout, smooth responsive animations, and a premium visual aesthetic.",
-    url: "https://obby.libraryirc.net",
+    url: "https://obby.librairc.net",
     icon: Layers,
     status: "new" as const,
     buttonLabel: "Launch Obby Chat",
@@ -53,7 +53,7 @@ const clients = [
     tagline: "Feature-Rich",
     description:
       "A modern self-hosted chat client that stays connected in the background. It remembers where you left off, supports rich media previews, push notifications, and multiple layouts.",
-    url: "https://lounge.libraryirc.net",
+    url: "https://lounge.librairc.net",
     icon: MessageSquare,
     status: "stable" as const,
     buttonLabel: "Launch The Lounge",
@@ -69,7 +69,7 @@ const clients = [
     tagline: "Classic Chat",
     description:
       "The time-tested, familiar, and highly reliable web chat client. Intuitive for IRC newcomers and packed with all the standard features a veteran chatter expects.",
-    url: "https://kiwi.libraryirc.net",
+    url: "https://kiwi.librairc.net",
     icon: Radio,
     status: "legacy" as const,
     buttonLabel: "Launch Classic Kiwi",
