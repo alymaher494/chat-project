@@ -225,6 +225,120 @@ export function HeroSection() {
           ))}
         </motion.div>
 
+        {/* Showcase Mockup Block */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mt-20 w-full max-w-5xl mx-auto"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2">
+              Experience the Web Client Demo
+            </h3>
+            <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
+              No downloads, no configuration. Connect directly from your browser in seconds with our optimized web interfaces.
+            </p>
+          </div>
+
+          {/* Browser Mockup */}
+          <div className="rounded-xl border border-border bg-card/60 backdrop-blur-md overflow-hidden shadow-2xl shadow-primary/5">
+            {/* Browser Header */}
+            <div className="flex items-center justify-between px-4 py-3 bg-muted/40 border-b border-border/50">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+              </div>
+              <div className="flex-1 max-w-md mx-auto">
+                <div className="bg-background/80 border border-border/50 rounded-lg px-3 py-1 text-xs text-muted-foreground text-center font-mono select-none">
+                  https://chat.librairc.net
+                </div>
+              </div>
+              <div className="w-16" /> {/* Spacer */}
+            </div>
+
+            {/* Browser Body / Simulated Chat Client */}
+            <div className="grid grid-cols-12 h-[380px] bg-[#0c1017] text-slate-300 font-sans">
+              {/* Sidebar */}
+              <div className="col-span-3 border-r border-slate-800 bg-[#0e141b] p-4 flex flex-col justify-between hidden md:flex">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 px-2 text-slate-400 text-xs font-bold uppercase tracking-wider">
+                    <span>Channels</span>
+                  </div>
+                  <div className="space-y-1">
+                    <button className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-primary/10 text-primary font-bold text-sm text-left">
+                      <span>#</span> lobby
+                    </button>
+                    <button className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 text-sm text-left transition-colors">
+                      <span>#</span> cybercafe
+                    </button>
+                    <button className="w-full flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 text-sm text-left transition-colors">
+                      <span>#</span> helpdesk
+                    </button>
+                  </div>
+                </div>
+                
+                <div className="border-t border-slate-800/60 pt-3 px-2 flex items-center gap-2.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-xs text-slate-400 font-semibold">User: Guest648</span>
+                </div>
+              </div>
+
+              {/* Chat View */}
+              <div className="col-span-12 md:col-span-9 flex flex-col justify-between h-full bg-[#0b0e14]">
+                {/* Chat Header */}
+                <div className="flex items-center justify-between px-5 py-3 border-b border-slate-800/60 bg-[#0e141b]/60">
+                  <div className="flex items-center gap-2">
+                    <span className="text-primary font-bold text-lg">#lobby</span>
+                    <span className="text-slate-500 text-xs hidden sm:inline">|</span>
+                    <span className="text-slate-400 text-xs hidden sm:inline">Welcome to the main channel!</span>
+                  </div>
+                  <div className="text-xs text-slate-500 font-mono">
+                    Users: 412
+                  </div>
+                </div>
+
+                {/* Messages Area */}
+                <div className="flex-1 p-5 overflow-y-auto space-y-4 font-mono text-xs sm:text-sm">
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-bold">&lt;Alice&gt;</span>
+                    <span className="text-slate-300">Welcome to LibraIRC! Let's build something cool.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-sky-400 font-bold">&lt;Bob&gt;</span>
+                    <span className="text-slate-300">I love how fast this client loads. No heavy web app bloat!</span>
+                  </div>
+                  <div className="flex items-start gap-2 bg-slate-800/20 py-1.5 px-2.5 rounded-lg border border-slate-800/40">
+                    <span className="text-emerald-400 font-bold">&lt;System&gt;</span>
+                    <span className="text-slate-400">User Guest648 has joined the channel.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-primary font-bold">&lt;Guest648&gt;</span>
+                    <span className="text-slate-300">Hello! Glad to be here. This feels so nostalgic yet modern.</span>
+                  </div>
+                </div>
+
+                {/* Input Bar */}
+                <div className="p-4 border-t border-slate-800/60 bg-[#0e141b]/40">
+                  <div className="flex items-center gap-3 bg-[#080b0f] border border-slate-800 rounded-lg px-4 py-2.5">
+                    <span className="text-slate-600 font-mono text-sm">&gt;</span>
+                    <input 
+                      type="text" 
+                      placeholder="Message #lobby..." 
+                      className="bg-transparent border-none outline-none text-slate-200 text-sm flex-1 placeholder:text-slate-600"
+                      disabled
+                    />
+                    <button className="bg-primary hover:bg-primary/90 text-primary-foreground text-xs font-bold px-3 py-1.5 rounded-md transition-colors">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

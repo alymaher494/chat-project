@@ -1,30 +1,7 @@
 "use client";
 
-import { Shield, Globe, Layers, Hash, Coffee, LifeBuoy, MessageSquare } from "lucide-react";
+import { Shield, Globe, Layers } from "lucide-react";
 import { motion, Variants } from "framer-motion";
-
-const featuredRooms = [
-  {
-    icon: Hash,
-    title: "#TheLobby",
-    description: "The main meeting point. Perfect for general chit-chat, making new friends, and casual daily conversations.",
-  },
-  {
-    icon: Coffee,
-    title: "#CyberCafe",
-    description: "Where developers, tech enthusiasts, and Linux geeks gather to discuss coding, networks, and the future of technology.",
-  },
-  {
-    icon: LifeBuoy,
-    title: "#Helpdesk",
-    description: "Need assistance with the network, setting up your own client, or registering a channel? Our operators are here 24/7.",
-  },
-  {
-    icon: MessageSquare,
-    title: "#ChitChat",
-    description: "A relaxed environment for sharing music, movies, quotes, and hanging out with a global community.",
-  },
-];
 
 const features = [
   {
@@ -60,52 +37,7 @@ const itemVariants: Variants = {
 export function FeaturesSection() {
   return (
     <section id="features" className="py-16 sm:py-20 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto space-y-20">
-        
-        {/* Featured Chat Rooms */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.4 }}
-            className="mb-10"
-          >
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-3">
-              Featured Chat Rooms
-            </h2>
-            <p className="text-lg text-muted-foreground font-medium max-w-2xl leading-relaxed">
-              Jump right into the conversation. Here are some of the most active channels on the LibraIRC network.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {featuredRooms.map((room) => (
-              <motion.div
-                key={room.title}
-                variants={itemVariants}
-                className="group p-6 rounded-xl border border-border/60 bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-200"
-              >
-                <div className="flex items-center gap-3.5 mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary shrink-0">
-                    <room.icon className="size-6" />
-                  </div>
-                  <h3 className="font-bold text-xl">{room.title}</h3>
-                </div>
-                <p className="text-base font-medium text-muted-foreground leading-relaxed">
-                  {room.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-
+      <div className="max-w-7xl mx-auto">
         {/* Core Features */}
         <div>
           <motion.div
@@ -113,12 +45,12 @@ export function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4 }}
-            className="mb-10"
+            className="mb-10 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-3">
-              Why Choose LibraIRC?
+              Why Choose <span className="text-primary">LibraIRC</span>?
             </h2>
-            <p className="text-lg text-muted-foreground font-medium max-w-2xl leading-relaxed">
+            <p className="text-lg text-muted-foreground font-medium leading-relaxed">
               LibraIRC brings back the simplicity of the early internet chat rooms with modern speeds, interfaces, and absolute security.
             </p>
           </motion.div>
@@ -149,7 +81,6 @@ export function FeaturesSection() {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );
