@@ -27,7 +27,6 @@ const footerNav = {
     { label: "Help / Support (#Help)", href: "ircs://irc.librairc.net:6697/%23Help" },
     { label: "Helpdesk Resource", href: "https://librairc.net/helpdesk/", external: true },
     { label: "IRC Commands", href: "#how-it-works" },
-    { label: "GitHub", href: "https://github.com", external: true },
   ],
 };
 

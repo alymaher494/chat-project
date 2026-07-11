@@ -33,11 +33,11 @@ const steps = [
 const nativeClients = [
   { name: "KVIrc", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
   { name: "AdiIRC", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "mIRC", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
   { name: "Quassel", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
   { name: "Halloy", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
   { name: "IRCCloud", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
   { name: "HexDroid", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
-  { name: "mIRC", href: "https://www.mirc.com/index.html", external: true },
 ];
 
 const containerVariants: Variants = {
@@ -134,7 +134,7 @@ export function HowItWorksSection() {
               rel="noopener noreferrer"
               className="text-xs font-bold text-primary hover:underline flex items-center gap-1 bg-primary/10 border border-primary/20 px-3.5 py-2 rounded-lg"
             >
-              Old Helpdesk Resource &rarr;
+              Helpdesk Resource &rarr;
             </a>
           </div>
         </motion.div>
