@@ -84,6 +84,23 @@ const clients = [
       "A trusted classic experience",
     ],
   },
+  {
+    id: "qwebirc",
+    name: "Qwebirc Client",
+    tagline: "Traditional Web Chat",
+    description:
+      "A highly compatible, traditional web interface. Best for older browsers and users who prefer a classic, retro IRC web chat feel without additional overhead.",
+    url: "https://webchat.librairc.net",
+    icon: MonitorSmartphone,
+    status: "stable" as const,
+    buttonLabel: "Launch Qwebirc",
+    features: [
+      "Highly compatible with older browsers",
+      "Traditional IRC look and feel",
+      "Fast and direct connection",
+      "Sensible retro styling",
+    ],
+  },
 ];
 
 const statusConfig = {
@@ -216,6 +233,24 @@ export function AppsSection() {
                 <input type="text" placeholder="Start typing..." className="bg-transparent text-slate-200 outline-none flex-1 text-[10px]" disabled />
                 <button className="bg-primary text-primary-foreground font-bold px-2 py-0.5 rounded text-[9px]">Send</button>
               </div>
+            </div>
+          </div>
+        );
+      case "qwebirc":
+        return (
+          <div className="flex flex-col h-full bg-[#0a0d14] font-mono text-[9px] sm:text-xs text-emerald-400 p-4">
+            {/* Qwebirc Classic Retro Monospace UI */}
+            <div className="flex-1 space-y-1.5 overflow-y-auto">
+              <div>*** Connecting to irc.librairc.net [port 6697]...</div>
+              <div>*** Connected securely using TLSv1.3</div>
+              <div>*** Welcome to LibraIRC! Type /join #lounge to start chatting.</div>
+              <div><span className="text-slate-300 font-bold">&lt;Alice&gt;</span> Anyone using the webchat client?</div>
+              <div><span className="text-slate-300 font-bold">&lt;Bob&gt;</span> Yes, this is qwebirc running on webchat.librairc.net!</div>
+              <div className="text-slate-400">*** Guest928 [Guest928@librairc-client.net] has joined #lounge</div>
+            </div>
+            <div className="mt-2 pt-2 border-t border-emerald-950 flex gap-2 text-slate-300">
+              <span className="font-bold text-emerald-400">[Guest928]</span>
+              <span className="text-slate-500">Type message here...</span>
             </div>
           </div>
         );

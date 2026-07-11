@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
 const steps = [
   {
@@ -19,7 +20,7 @@ const steps = [
     number: "3",
     title: "Join a Channel",
     description:
-      "You'll be dropped into #librairc by default. From there you can join any channel or explore the full list.",
+      "You'll be dropped into #lounge by default. From there you can join any channel or explore the full list.",
   },
   {
     number: "4",
@@ -27,6 +28,16 @@ const steps = [
     description:
       "That's it! You're connected. Say hello, ask for help, or just hang out with the community.",
   },
+];
+
+const nativeClients = [
+  { name: "KVIrc", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "AdiIRC", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "Quassel", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "Halloy", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "IRCCloud", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "HexDroid", href: "ircs://irc.librairc.net:6697/#lounge", external: false },
+  { name: "mIRC", href: "https://www.mirc.com/index.html", external: true },
 ];
 
 const containerVariants: Variants = {
@@ -103,13 +114,15 @@ export function HowItWorksSection() {
           <div className="text-sm text-muted-foreground text-center sm:text-left">
             <span className="font-bold text-foreground">Prefer a native client?</span> Connect securely using:
             <div className="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
-              {["KVIrc", "AdiIRC", "Quassel", "Halloy", "IRCCloud", "HexDroid"].map((c) => (
+              {nativeClients.map((c) => (
                 <a
-                  key={c}
-                  href="ircs://irc.librairc.net:6697/#lounge"
-                  className="px-2.5 py-1 rounded bg-muted hover:bg-primary/20 hover:text-primary transition-colors text-xs font-semibold text-foreground border border-border"
+                  key={c.name}
+                  href={c.href}
+                  {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="px-2.5 py-1 rounded bg-muted hover:bg-primary/20 hover:text-primary transition-colors text-xs font-semibold text-foreground border border-border inline-flex items-center gap-1"
                 >
-                  {c}
+                  {c.name}
+                  {c.external && <ExternalLink className="size-2.5" />}
                 </a>
               ))}
             </div>

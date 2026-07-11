@@ -20,8 +20,8 @@ const defaultStats: NetworkStats = {
 };
 
 const terminalLines = [
-  { text: "$ ", cmd: "/join #general", type: "command" },
-  { text: "» Joined #general (Topic: Welcome to LibraIRC!)", type: "success" },
+  { text: "$ ", cmd: "/join #lounge", type: "command" },
+  { text: "» Joined #lounge (Topic: Welcome to LibraIRC!)", type: "success" },
   { user: "Alice", text: "Hey everyone! Welcome to LibraIRC 💬", type: "message" },
   { user: "Bob", text: "Is this really anonymous?", type: "message" },
   { user: "System", text: "Yes! Zero logging, zero trackers, pure chat.", type: "success" },
@@ -62,7 +62,7 @@ export function HeroSection() {
   }, []);
 
   const copyCommand = useCallback(() => {
-    navigator.clipboard.writeText("/connect irc.librairc.net");
+    navigator.clipboard.writeText("/server irc.librairc.net");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, []);

@@ -21,10 +21,12 @@ const footerNav = {
     { label: "Obby", href: "https://obby.librairc.net", external: true },
     { label: "The Lounge", href: "https://lounge.librairc.net", external: true },
     { label: "KiwiIRC", href: "https://kiwi.librairc.net", external: true },
+    { label: "Qwebirc", href: "https://webchat.librairc.net", external: true },
   ],
   Resources: [
+    { label: "Help / Support (#Help)", href: "ircs://irc.librairc.net:6697/%23Help" },
+    { label: "Helpdesk Resource", href: "https://librairc.net/helpdesk/", external: true },
     { label: "IRC Commands", href: "#how-it-works" },
-    { label: "Help / Support", href: "ircs://irc.librairc.net:6697/%23help" },
     { label: "GitHub", href: "https://github.com", external: true },
   ],
 };
@@ -44,7 +46,11 @@ export function Footer() {
                 Libra<span className="text-primary">IRC</span>
               </span>
             </div>
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed italic border-l-2 border-primary/40 pl-3">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mb-4">
+              A modern, community-driven IRC network. Open source, privacy focused,
+              and built to last. Connect instantly and chat freely.
+            </p>
+            <p className="text-xs text-muted-foreground leading-relaxed italic border-l-2 border-primary/40 pl-3">
               "Welcome to LibraIRC.net! Do not enter here if you are sane, the management can not be held responsible should you have entered the realms of insanity when you quit the server. :)"
             </p>
           </div>
