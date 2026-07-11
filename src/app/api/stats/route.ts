@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   // Default network stats — in production, this would query the IRC server
   // via InspIRCd's JSON API or a stats bot.
