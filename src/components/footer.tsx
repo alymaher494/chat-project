@@ -5,9 +5,11 @@ import { Hash, ExternalLink } from "lucide-react";
 const footerNav = {
   Navigation: [
     { label: "Home", href: "#home" },
+    { label: "Chat Now", href: "#apps" },
     { label: "Features", href: "#features" },
     { label: "Services", href: "#services" },
-    { label: "Web Clients", href: "#apps" },
+    { label: "Clients", href: "#apps" },
+    { label: "Help", href: "#how-it-works" },
   ],
   Network: [
     { label: "FAQ", href: "https://librairc.net/faq", external: true },
