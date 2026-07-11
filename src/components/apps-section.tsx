@@ -297,8 +297,44 @@ export function AppsSection() {
             >
               <div className="p-6 sm:p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                  {/* Left: Info */}
-                  <div className="lg:col-span-4 flex flex-col justify-between">
+                  {/* Left: Quick List Selector */}
+                  <div className="lg:col-span-3 lg:border-r lg:border-border/40 lg:pr-8 flex flex-col justify-between">
+                    <div>
+                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                        All Clients
+                      </p>
+                      <div className="space-y-1">
+                        {clients.map((c, i) => (
+                          <button
+                            key={c.name}
+                            onClick={() => {
+                              setActiveIndex(i);
+                            }}
+                            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors text-sm text-left ${
+                              i === activeIndex
+                                ? "bg-primary/10 text-primary"
+                                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                            }`}
+                          >
+                            <c.icon className="size-4 shrink-0" />
+                            <span className="font-medium">{c.name}</span>
+                            <Badge
+                              variant="outline"
+                              className={`ml-auto text-[10px] px-1.5 py-0 ${statusConfig[c.status].className}`}
+                            >
+                              {statusConfig[c.status].label}
+                            </Badge>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-[11px] text-muted-foreground mt-4 leading-relaxed lg:mt-0 pt-4 border-t lg:border-none border-border/40">
+                      All clients connect to the same open, welcoming network—just choose the interface that feels right for you.
+                    </p>
+                  </div>
+
+                  {/* Center: Info */}
+                  <div className="lg:col-span-4 lg:border-r lg:border-border/40 lg:pr-8 flex flex-col justify-between">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
@@ -344,7 +380,7 @@ export function AppsSection() {
                     </div>
                   </div>
 
-                  {/* Center: Dynamic Browser Mockup preview */}
+                  {/* Right: Dynamic Browser Mockup preview */}
                   <div className="lg:col-span-5 flex flex-col justify-center min-h-[260px] lg:min-h-0">
                     <div className="rounded-lg border border-border/80 bg-[#070a0e] overflow-hidden flex flex-col h-full min-h-[240px] shadow-lg shadow-black/35">
                       {/* Mockup Header */}
@@ -364,42 +400,6 @@ export function AppsSection() {
                         {renderClientMockup(client.id)}
                       </div>
                     </div>
-                  </div>
-
-                  {/* Right: Quick List Selector */}
-                  <div className="lg:col-span-3 lg:border-l lg:border-border/40 lg:pl-8 flex flex-col justify-between">
-                    <div>
-                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
-                        All Clients
-                      </p>
-                      <div className="space-y-1">
-                        {clients.map((c, i) => (
-                          <button
-                            key={c.name}
-                            onClick={() => {
-                              setActiveIndex(i);
-                            }}
-                            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors text-sm text-left ${
-                              i === activeIndex
-                                ? "bg-primary/10 text-primary"
-                                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                            }`}
-                          >
-                            <c.icon className="size-4 shrink-0" />
-                            <span className="font-medium">{c.name}</span>
-                            <Badge
-                              variant="outline"
-                              className={`ml-auto text-[10px] px-1.5 py-0 ${statusConfig[c.status].className}`}
-                            >
-                              {statusConfig[c.status].label}
-                            </Badge>
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-[11px] text-muted-foreground mt-4 leading-relaxed lg:mt-0 pt-4 border-t lg:border-none border-border/40">
-                      All clients connect to the same open, welcoming network—just choose the interface that feels right for you.
-                    </p>
                   </div>
                 </div>
               </div>

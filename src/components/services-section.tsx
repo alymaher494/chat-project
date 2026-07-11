@@ -6,7 +6,7 @@ import { motion, Variants } from "framer-motion";
 const chatRooms = [
   {
     icon: MessageSquare,
-    name: "#TheLobby",
+    name: "#Lounge",
     activeUsers: 412,
     topic: "General Chat",
     description:
@@ -14,7 +14,7 @@ const chatRooms = [
   },
   {
     icon: Coffee,
-    name: "#CyberCafe",
+    name: "#Friends",
     activeUsers: 289,
     topic: "Tech & Coding",
     description:
@@ -22,15 +22,15 @@ const chatRooms = [
   },
   {
     icon: HelpCircle,
-    name: "#Helpdesk",
+    name: "#Libra",
     activeUsers: 104,
-    topic: "Support 24/7",
+    topic: "Trivia Game",
     description:
-      "Need assistance with the network, setting up your own client, or registering a channel? Our operators are here to help.",
+      "The official network Trivia game room. Test your knowledge, compete with others, and climb the leaderboard.",
   },
   {
     icon: Users,
-    name: "#ChitChat",
+    name: "#Chat",
     activeUsers: 435,
     topic: "Entertainment",
     description:
@@ -138,10 +138,10 @@ export function ServicesSection() {
         >
           Looking for a specific topic? Connect to find more rooms or ask in{" "}
           <a
-            href="irc://irc.librairc.net/%23helpdesk"
+            href="ircs://irc.librairc.net:6697/%23help"
             className="text-primary hover:underline font-semibold"
           >
-            #Helpdesk
+            #Help
           </a>
         </motion.p>
       </div>

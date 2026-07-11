@@ -102,11 +102,13 @@ export function Navbar() {
           </button>
           <div className="w-px h-5 bg-border mx-1" />
           <Button
-            onClick={() => handleNav("#apps")}
+            asChild
             className="bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-4 text-sm"
           >
-            <MessageSquare className="size-3.5" />
-            Connect
+            <a href="https://kiwi.librairc.net" target="_blank" rel="noopener noreferrer">
+              <MessageSquare className="size-3.5" />
+              Connect
+            </a>
           </Button>
         </div>
 
@@ -151,11 +153,13 @@ export function Navbar() {
                   {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
                 </Button>
                 <Button
-                  onClick={() => handleNav("#apps")}
+                  asChild
                   className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
                 >
-                  <MessageSquare className="size-3.5" />
-                  Connect to Chat
+                  <a href="https://kiwi.librairc.net" target="_blank" rel="noopener noreferrer">
+                    <MessageSquare className="size-3.5" />
+                    Connect to Chat
+                  </a>
                 </Button>
               </div>
             </div>

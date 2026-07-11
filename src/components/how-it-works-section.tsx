@@ -93,18 +93,38 @@ export function HowItWorksSection() {
         </motion.div>
 
         {/* Desktop client note */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.4 }}
-          className="mt-6 text-sm text-muted-foreground"
+          className="mt-10 border-t border-border/30 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          Prefer a desktop client? Connect with{" "}
-          <code className="px-1.5 py-0.5 rounded bg-muted/60 text-xs font-mono">
-            /server irc.librairc.net +6697
-          </code>
-        </motion.p>
+          <div className="text-sm text-muted-foreground text-center sm:text-left">
+            <span className="font-bold text-foreground">Prefer a native client?</span> Connect securely using:
+            <div className="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
+              {["KVIrc", "AdiIRC", "Quassel", "Halloy", "IRCCloud", "HexDroid"].map((c) => (
+                <a
+                  key={c}
+                  href="ircs://irc.librairc.net:6697/#lounge"
+                  className="px-2.5 py-1 rounded bg-muted hover:bg-primary/20 hover:text-primary transition-colors text-xs font-semibold text-foreground border border-border"
+                >
+                  {c}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="shrink-0">
+            <a
+              href="https://librairc.net/helpdesk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-bold text-primary hover:underline flex items-center gap-1 bg-primary/10 border border-primary/20 px-3.5 py-2 rounded-lg"
+            >
+              Old Helpdesk Resource &rarr;
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

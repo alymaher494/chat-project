@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   output: 'export',
+  basePath: '/landing',       // <-- ضيف السطر ده هنا
+  assetPrefix: '/landing',    // <-- وضيف السطر ده هنا
   images: {
     unoptimized: true,
   },
