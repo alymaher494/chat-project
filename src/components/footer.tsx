@@ -23,7 +23,9 @@ const footerNav = {
     { label: "Obby", href: "https://obby.librairc.net", external: true },
     { label: "The Lounge", href: "https://lounge.librairc.net", external: true },
     { label: "KiwiIRC", href: "https://kiwi.librairc.net", external: true },
-    { label: "Qwebirc", href: "https://webchat.librairc.net", external: true },
+    { label: "Orbit", href: "https://webchat.librairc.net", external: true },
+    { label: "jWebIRC", href: "https://jwebirc.librairc.net", external: true },
+    { label: "Wirgloo", href: "https://wirgloo.librairc.net", external: true },
   ],
   Resources: [
     { label: "Help / Support (#Help)", href: "ircs://irc.librairc.net:6697/%23Help" },

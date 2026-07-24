@@ -85,20 +85,54 @@ const clients = [
     ],
   },
   {
-    id: "qwebirc",
-    name: "Qwebirc Client",
-    tagline: "Traditional Web Chat",
+    id: "orbit",
+    name: "Orbit Webchat",
+    tagline: "Modern Web Chat",
     description:
-      "A highly compatible, traditional web interface. Best for older browsers and users who prefer a classic, retro IRC web chat feel without additional overhead.",
+      "A highly customizable, fast, and feature-rich modern web client. Perfect for desktop and mobile devices alike.",
     url: "https://webchat.librairc.net",
     icon: MonitorSmartphone,
     status: "stable" as const,
-    buttonLabel: "Launch Qwebirc",
+    buttonLabel: "Launch Orbit",
     features: [
-      "Highly compatible with older browsers",
-      "Traditional IRC look and feel",
-      "Fast and direct connection",
-      "Sensible retro styling",
+      "Sleek, modern user interface",
+      "Fast and responsive design",
+      "Highly customizable features",
+      "Seamless desktop & mobile experience",
+    ],
+  },
+  {
+    id: "jwebirc",
+    name: "jWebIRC",
+    tagline: "Classic Java-Style Web Chat",
+    description:
+      "A reliable, lightweight Java-style web client. Designed for quick, text-first communication without browser overhead.",
+    url: "https://jwebirc.librairc.net",
+    icon: Radio,
+    status: "stable" as const,
+    buttonLabel: "Launch jWebIRC",
+    features: [
+      "Simple, text-driven interface",
+      "Lightweight and reliable",
+      "Instant connection",
+      "No modern browser bloat",
+    ],
+  },
+  {
+    id: "wirgloo",
+    name: "Wirgloo",
+    tagline: "Clean Web Portal",
+    description:
+      "A minimalist web portal prioritizing accessibility, readability, and immediate connections to the community channels.",
+    url: "https://wirgloo.librairc.net",
+    icon: Layers,
+    status: "new" as const,
+    buttonLabel: "Launch Wirgloo",
+    features: [
+      "Clean, read-optimized typography",
+      "Minimalistic theme options",
+      "Optimized for mobile viewing",
+      "Quick connection setup",
     ],
   },
 ];
@@ -236,21 +270,58 @@ export function AppsSection() {
             </div>
           </div>
         );
-      case "qwebirc":
+      case "orbit":
         return (
-          <div className="flex flex-col h-full bg-[#0a0d14] font-mono text-[9px] sm:text-xs text-emerald-400 p-4">
-            {/* Qwebirc Classic Retro Monospace UI */}
-            <div className="flex-1 space-y-1.5 overflow-y-auto">
-              <div>*** Connecting to irc.librairc.net [port 6697]...</div>
-              <div>*** Connected securely using TLSv1.3</div>
-              <div>*** Welcome to LibraIRC! Type /join #lounge to start chatting.</div>
-              <div><span className="text-slate-300 font-bold">&lt;Alice&gt;</span> Anyone using the webchat client?</div>
-              <div><span className="text-slate-300 font-bold">&lt;Bob&gt;</span> Yes, this is qwebirc running on webchat.librairc.net!</div>
-              <div className="text-slate-400">*** Guest928 [Guest928@librairc-client.net] has joined #lounge</div>
+          <div className="flex flex-col h-full bg-[#070b13] font-sans text-[10px] sm:text-xs text-slate-300 p-3">
+            {/* Orbit Client Mockup */}
+            <div className="flex items-center justify-between border-b border-slate-800 pb-2 mb-2">
+              <span className="font-bold text-primary">#lounge (Orbit Client)</span>
+              <span className="text-[9px] bg-primary/20 text-primary px-1.5 rounded">Active</span>
             </div>
-            <div className="mt-2 pt-2 border-t border-emerald-950 flex gap-2 text-slate-300">
-              <span className="font-bold text-emerald-400">[Guest928]</span>
-              <span className="text-slate-500">Type message here...</span>
+            <div className="flex-1 space-y-2 overflow-y-auto">
+              <div><span className="text-primary font-bold">Alice:</span> Welcome to the brand new Orbit webchat!</div>
+              <div><span className="text-sky-400 font-bold">Bob:</span> Wow, this interface is super smooth.</div>
+              <div><span className="text-emerald-400 font-bold">Guest110:</span> Beautiful layout, love the dashboard feel!</div>
+            </div>
+            <div className="mt-2 pt-2 border-t border-slate-800 flex gap-2">
+              <span className="text-slate-500">Message #lounge using Orbit...</span>
+            </div>
+          </div>
+        );
+      case "jwebirc":
+        return (
+          <div className="flex flex-col h-full bg-[#f0f0f0] font-mono text-[9px] sm:text-xs text-black p-3 border border-slate-400">
+            {/* jWebIRC Classic Retro UI */}
+            <div className="flex items-center gap-1.5 bg-[#dfdfdf] border-b border-slate-400 px-2 py-1 mb-2 font-sans font-bold">
+              <span>jWebIRC v1.2</span>
+            </div>
+            <div className="flex-1 space-y-1.5 overflow-y-auto bg-white border border-slate-400 p-2 text-slate-800">
+              <div>*** Connecting to irc.librairc.net [port 6697]...</div>
+              <div>*** Connected. Looking up your hostname...</div>
+              <div>&lt;Alice&gt; Welcome to the classic jWebIRC interface!</div>
+              <div>&lt;Bob&gt; Pure text, extremely fast. No bloated scripts.</div>
+            </div>
+            <div className="mt-2 flex gap-1">
+              <input type="text" className="border border-slate-400 bg-white px-1 flex-1 text-[10px]" disabled placeholder="Message..." />
+              <button className="bg-[#dfdfdf] border border-slate-400 px-2 py-0.5 text-[10px] font-sans font-bold">Send</button>
+            </div>
+          </div>
+        );
+      case "wirgloo":
+        return (
+          <div className="flex flex-col h-full bg-[#0a0c10] font-sans text-[10px] sm:text-xs text-slate-300 p-4">
+            {/* Wirgloo UI */}
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-2.5 h-2.5 rounded-full bg-primary" />
+              <span className="font-bold text-slate-100">Wirgloo Web Portal</span>
+            </div>
+            <div className="flex-1 space-y-2 overflow-y-auto text-slate-400">
+              <div><span className="text-slate-200">&lt;Alice&gt;</span> Hello! Wirgloo layout is extremely clean.</div>
+              <div><span className="text-slate-200">&lt;Bob&gt;</span> Agreed, very readable typography here.</div>
+              <div><span className="text-slate-500">* Guest248 joined the conversation.</span></div>
+            </div>
+            <div className="mt-2 pt-2 border-t border-slate-900 flex gap-2">
+              <span className="text-slate-600">Write something...</span>
             </div>
           </div>
         );
