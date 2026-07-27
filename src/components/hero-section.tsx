@@ -270,6 +270,7 @@ export function HeroSection() {
                 className="w-full h-[45vh] sm:h-[50vh] lg:h-[55vh] min-h-[440px] max-h-[500px] border-none bg-[#0c1017] overflow-hidden"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
+                scrolling="no"
               />
             </div>
           </div>
