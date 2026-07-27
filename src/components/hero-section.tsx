@@ -235,9 +235,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="scroll-mt-24 mt-20 w-full max-w-5xl mx-auto"
+          className="scroll-mt-24 mt-10 w-full max-w-5xl mx-auto"
         >
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2">
               Experience the Web Client
             </h3>
@@ -247,7 +247,22 @@ export function HeroSection() {
           </div>
 
           {/* Browser Mockup */}
-          <div className="rounded-xl border border-border bg-[#0c1017] overflow-hidden shadow-2xl shadow-primary/5">
+          <div className="rounded-xl border border-border bg-card/60 backdrop-blur-md overflow-hidden shadow-2xl shadow-primary/5">
+            {/* Browser Header */}
+            <div className="flex items-center justify-between px-4 py-3 bg-muted/40 border-b border-border/50">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
+              </div>
+              <div className="flex-1 max-w-md mx-auto">
+                <div className="bg-background/80 border border-border/50 rounded-lg px-3 py-1 text-xs text-muted-foreground text-center font-mono select-none">
+                  https://kiwi.librairc.net
+                </div>
+              </div>
+              <div className="w-16" /> {/* Spacer */}
+            </div>
+
             {/* Browser Body / Embedded Live Client */}
             <div className="w-full bg-[#0c1017] text-slate-300 font-sans overflow-hidden">
               <iframe 
