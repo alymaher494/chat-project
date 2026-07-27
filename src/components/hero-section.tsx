@@ -267,7 +267,7 @@ export function HeroSection() {
             <div className="w-full bg-[#0c1017] text-slate-300 font-sans overflow-hidden">
               <iframe 
                 src="https://kiwi.librairc.net/?nick=Guest?#lounge"
-                className="w-full h-[480px] min-h-[480px] max-h-[480px] border-none bg-[#0c1017] overflow-hidden"
+                className="w-full h-[600px] min-h-[600px] max-h-[600px] border-none bg-[#0c1017] overflow-hidden"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
                 scrolling="no"
