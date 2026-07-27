@@ -266,7 +266,7 @@ export function HeroSection() {
             {/* Browser Body / Embedded Live Client */}
             <div className="w-full bg-[#0c1017] text-slate-300 font-sans overflow-hidden">
               <iframe 
-                src="https://kiwi.librairc.net/?nick=Guest?&css=https://librairc.net/custom-kiwi.css#lounge"
+                src="https://kiwi.librairc.net/?nick=Guest?&css=https://librairc.net/landing/custom-kiwi.css#lounge"
                 className="w-full h-[463px] min-h-[463px] max-h-[463px] border-none bg-[#0c1017] overflow-hidden"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
