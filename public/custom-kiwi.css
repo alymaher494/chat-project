@@ -1,0 +1,17 @@
+form.kiwi-welcome-simple-form h2 {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    cursor: default !important;
+    font-weight: 600 !important;
+    font-size: 2em !important;
+    text-align: center !important;
+    line-height: 1.05em !important;
+}
+
+/* Hide the internal scrollbars of the Kiwi welcoming form container */
+.kiwi-welcome-simple-form {
+    overflow-y: hidden !important;
+}
+.kiwi-welcome-simple-form-container {
+    overflow-y: hidden !important;
+}
