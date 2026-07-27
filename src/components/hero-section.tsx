@@ -71,6 +71,10 @@ export function HeroSection() {
     document.querySelector("#chat")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToClients = () => {
+    document.querySelector("#clients")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="home"
@@ -100,7 +104,7 @@ export function HeroSection() {
               <Button onClick={scrollToChat} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8 py-7 text-lg">
                 💬 Enter Chat Rooms Now
               </Button>
-              <Button onClick={scrollToChat} variant="outline" size="lg" className="font-bold px-8 py-7 text-lg">
+              <Button onClick={scrollToClients} variant="outline" size="lg" className="font-bold px-8 py-7 text-lg">
                 View Available Apps
               </Button>
             </div>
@@ -263,7 +267,7 @@ export function HeroSection() {
             <div className="w-full bg-[#0c1017] text-slate-300 font-sans">
               <iframe 
                 src="https://kiwi.librairc.net/?nick=Guest?#lounge"
-                className="w-full h-[550px] border-none bg-[#0c1017]"
+                className="w-full h-[400px] sm:h-[480px] md:h-[550px] max-h-[70vh] border-none bg-[#0c1017]"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
               />
