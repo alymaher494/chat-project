@@ -234,7 +234,7 @@ export function HeroSection() {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2">
-              Experience the Web Client Demo
+              Experience the Web Client
             </h3>
             <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
               No downloads, no configuration. Connect directly from your browser in seconds with our optimized web interfaces.
