@@ -23,7 +23,7 @@ const navLinks = [
   },
   { label: "Features", href: "#features", icon: null },
   { label: "Services", href: "#services", icon: null },
-  { label: "Clients", href: "#chat", icon: null },
+  { label: "Clients", href: "#clients", icon: null },
   { label: "Help", href: "#how-it-works", icon: Info },
 ];
 

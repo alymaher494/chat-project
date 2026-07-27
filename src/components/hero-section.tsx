@@ -227,10 +227,11 @@ export function HeroSection() {
 
         {/* Showcase Mockup Block */}
         <motion.div
+          id="chat"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-20 w-full max-w-5xl mx-auto"
+          className="scroll-mt-24 mt-20 w-full max-w-5xl mx-auto"
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-2">

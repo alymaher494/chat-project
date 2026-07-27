@@ -8,7 +8,7 @@ const footerNav = {
     { label: "Chat Now", href: "#chat" },
     { label: "Features", href: "#features" },
     { label: "Services", href: "#services" },
-    { label: "Clients", href: "#chat" },
+    { label: "Clients", href: "#clients" },
     { label: "Help", href: "#how-it-works" },
   ],
   Network: [
