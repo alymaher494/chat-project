@@ -34,23 +34,6 @@ const clients = [
     ],
   },
   {
-    id: "obby",
-    name: "Obby Client",
-    tagline: "Next-Gen Interface",
-    description:
-      "A gorgeous, modern web client built on cutting-edge web technologies. Features a sleek dashboard layout, smooth responsive animations, and a premium visual aesthetic.",
-    url: "https://obby.librairc.net",
-    icon: Layers,
-    status: "new" as const,
-    buttonLabel: "Launch Obby Chat",
-    features: [
-      "Elegant, polished interface",
-      "Smooth and responsive experience",
-      "Built for modern browsers",
-      "A premium feel without the fuss",
-    ],
-  },
-  {
     id: "lounge",
     name: "The Lounge",
     tagline: "Feature-Rich",
@@ -169,41 +152,6 @@ export function AppsSection() {
             <div className="mt-2 pt-2 border-t border-slate-900 flex gap-2">
               <span className="text-slate-600 font-bold">&gt;</span>
               <span className="text-slate-500">Type message here...</span>
-            </div>
-          </div>
-        );
-      case "obby":
-        return (
-          <div className="grid grid-cols-12 h-full bg-[#0d1219] font-sans text-[10px] sm:text-xs">
-            {/* Obby Sleek Dashboard UI */}
-            <div className="col-span-3 bg-[#090d12] border-r border-slate-800 p-2 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Rooms</div>
-                <div className="bg-primary/15 text-primary rounded px-1.5 py-0.5 font-semibold">#lobby</div>
-                <div className="text-slate-400 px-1.5 py-0.5">#tech</div>
-              </div>
-              <div className="text-[9px] text-slate-500 font-mono">Obby NextGen</div>
-            </div>
-            <div className="col-span-9 flex flex-col justify-between p-3 bg-[#0d1219]">
-              <div className="space-y-2.5">
-                <div className="font-semibold text-slate-200 border-b border-slate-800/60 pb-1.5 flex justify-between items-center">
-                  <span>#lobby</span>
-                  <span className="text-[9px] bg-emerald-500/10 text-emerald-400 px-1 rounded">289 online</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex gap-2">
-                    <span className="font-bold text-primary">Alice</span>
-                    <span className="text-slate-300">Loving the glassmorphism dashboard of Obby!</span>
-                  </div>
-                  <div className="flex gap-2">
-                    <span className="font-bold text-sky-400">Bob</span>
-                    <span className="text-slate-300">Super clean animations on client swap.</span>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-[#070a0e] border border-slate-800 rounded px-2 py-1 text-slate-500">
-                Message #lobby...
-              </div>
             </div>
           </div>
         );
