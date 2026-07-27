@@ -264,10 +264,10 @@ export function HeroSection() {
             </div>
 
             {/* Browser Body / Embedded Live Client */}
-            <div className="w-full bg-[#0c1017] text-slate-300 font-sans">
+            <div className="w-full bg-[#0c1017] text-slate-300 font-sans overflow-hidden">
               <iframe 
                 src="https://kiwi.librairc.net/?nick=Guest?#lounge"
-                className="w-full h-[400px] sm:h-[480px] md:h-[550px] max-h-[70vh] border-none bg-[#0c1017]"
+                className="w-full h-[450px] sm:h-[520px] md:h-[600px] lg:h-[650px] max-h-[75vh] border-none bg-[#0c1017] overflow-hidden"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
               />
