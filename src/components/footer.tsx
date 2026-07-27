@@ -5,10 +5,10 @@ import { Hash, ExternalLink } from "lucide-react";
 const footerNav = {
   Navigation: [
     { label: "Home", href: "#home" },
-    { label: "Chat Now", href: "#apps" },
+    { label: "Chat Now", href: "#chat" },
     { label: "Features", href: "#features" },
     { label: "Services", href: "#services" },
-    { label: "Clients", href: "#apps" },
+    { label: "Clients", href: "#chat" },
     { label: "Help", href: "#how-it-works" },
   ],
   Network: [

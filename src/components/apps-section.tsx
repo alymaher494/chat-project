@@ -331,7 +331,7 @@ export function AppsSection() {
   };
 
   return (
-    <section id="apps" className="py-16 sm:py-20 px-4 sm:px-6 border-t border-border/40">
+    <section id="chat" className="py-16 sm:py-20 px-4 sm:px-6 border-t border-border/40">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div

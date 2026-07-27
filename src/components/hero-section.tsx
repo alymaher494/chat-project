@@ -67,8 +67,8 @@ export function HeroSection() {
     setTimeout(() => setCopied(false), 2000);
   }, []);
 
-  const scrollToApps = () => {
-    document.querySelector("#apps")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToChat = () => {
+    document.querySelector("#chat")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -97,10 +97,10 @@ export function HeroSection() {
               Welcome to <span className="text-foreground font-semibold">LibraIRC</span>—the ultimate network of free, anonymous, and real-time chat rooms. No registration required, no algorithms tracking you, and absolutely no bloat. Just step in, choose a room, and start chatting with amazing people worldwide.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button onClick={scrollToApps} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8 py-7 text-lg">
+              <Button onClick={scrollToChat} size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-8 py-7 text-lg">
                 💬 Enter Chat Rooms Now
               </Button>
-              <Button onClick={scrollToApps} variant="outline" size="lg" className="font-bold px-8 py-7 text-lg">
+              <Button onClick={scrollToChat} variant="outline" size="lg" className="font-bold px-8 py-7 text-lg">
                 View Available Apps
               </Button>
             </div>
@@ -252,7 +252,7 @@ export function HeroSection() {
               </div>
               <div className="flex-1 max-w-md mx-auto">
                 <div className="bg-background/80 border border-border/50 rounded-lg px-3 py-1 text-xs text-muted-foreground text-center font-mono select-none">
-                  https://webchat.librairc.net
+                  https://kiwi.librairc.net
                 </div>
               </div>
               <div className="w-16" /> {/* Spacer */}
@@ -261,8 +261,8 @@ export function HeroSection() {
             {/* Browser Body / Embedded Live Client */}
             <div className="w-full bg-[#0c1017] text-slate-300 font-sans">
               <iframe 
-                src="https://webchat.librairc.net/?channels=lounge"
-                className="w-full h-[450px] border-none bg-[#0c1017]"
+                src="https://kiwi.librairc.net/?nick=Guest?#lounge"
+                className="w-full h-[550px] border-none bg-[#0c1017]"
                 title="LibraIRC Web Client"
                 allow="clipboard-write"
               />

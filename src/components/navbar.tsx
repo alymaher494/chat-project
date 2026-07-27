@@ -18,12 +18,12 @@ const navLinks = [
   { label: "Home", href: "#home", icon: null },
   {
     label: "Chat Now",
-    href: "#apps",
+    href: "#chat",
     icon: MessageSquare,
   },
   { label: "Features", href: "#features", icon: null },
   { label: "Services", href: "#services", icon: null },
-  { label: "Clients", href: "#apps", icon: null },
+  { label: "Clients", href: "#chat", icon: null },
   { label: "Help", href: "#how-it-works", icon: Info },
 ];
 
