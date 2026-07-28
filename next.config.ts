@@ -4,8 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   output: 'export',
-  basePath: '/landing',
-  assetPrefix: '/landing',
   images: {
     unoptimized: true,
   },
