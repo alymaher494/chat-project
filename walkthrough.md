@@ -1,12 +1,12 @@
-# ZIP Package Re-creation Walkthrough
+# Re-run Build Walkthrough
 
 Here is a summary of the layout fixes completed:
 
 ## Changes Implemented
 
-### 1. Recreated Build Package
-- Cleared directory locks and deleted old build outputs to guarantee complete code rebuild.
-- Ran Next.js static build to export files for root directory deployment.
+### 1. Fresh Build
+- Cleared build directory and files.
+- Ran Next.js static build to export files.
 - Re-compressed the fresh `out` directory files directly into `out.zip`.
 
 ---
