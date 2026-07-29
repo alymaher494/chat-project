@@ -41,7 +41,7 @@ const clients = [
       "A modern self-hosted chat client that stays connected in the background. It remembers where you left off, supports rich media previews, push notifications, and multiple layouts.",
     url: "https://lounge.librairc.net",
     icon: MessageSquare,
-    status: "stable" as const,
+    status: "legacy" as const,
     buttonLabel: "Launch The Lounge",
     features: [
       "Stay connected in the background",
