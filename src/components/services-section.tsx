@@ -114,16 +114,9 @@ export function ServicesSection() {
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {room.description}
               </p>
-              <div className="flex items-center justify-between border-t border-border/30 pt-3 mt-auto">
-                <span className="text-xs text-muted-foreground font-semibold">Active Now</span>
-                <span className="flex items-center gap-1.5 text-xs text-emerald-400 font-bold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  {room.activeUsers} online
-                </span>
-              </div>
             </motion.div>
           ))}
         </motion.div>

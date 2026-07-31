@@ -1,13 +1,13 @@
-# Change Lounge Status to Legacy Walkthrough
+# Remove Active Now Part Walkthrough
 
 Here is a summary of the layout fixes completed:
 
 ## Changes Implemented
 
-### 1. Updated The Lounge Status
-- **File**: [apps-section.tsx](file:///c:/Users/alyma/Downloads/workspace-f01ef353-a637-473b-acaf-5518f1eff44f/src/components/apps-section.tsx)
-  - Updated status parameter of "The Lounge" client config from `stable` to `legacy`.
-  - The UI now renders a grayed-out "LEGACY" badge next to it, matching the styling of other legacy clients.
+### 1. Removed Active Now Indicators
+- **File**: [services-section.tsx](file:///c:/Users/alyma/Downloads/workspace-f01ef353-a637-473b-acaf-5518f1eff44f/src/components/services-section.tsx)
+  - Completely removed the footer container from each chat room block, which held the "Active Now" label, the green status indicator dot, and the "XXX online" user count.
+  - Set the description paragraph margin-bottom to auto-collapse (`mb-0`) to keep the cards structurally balanced.
 
 ---
 
